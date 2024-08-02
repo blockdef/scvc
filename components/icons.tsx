@@ -11,6 +11,10 @@ import {
   Copyright,
   Linkedin,
   ArrowBigDown,
+  Circle,
+  CircleEllipsis,
+  LucideArrowDownCircle,
+  PlusCircleIcon,
   type Icon as LucideIcon,
 } from "lucide-react"
 
@@ -18,6 +22,10 @@ export type Icon = LucideIcon
 
 export const Icons = {
   sun: SunMedium,
+  circle: Circle,
+  circlelipsis: CircleEllipsis,
+  arrowdowncircle: LucideArrowDownCircle,
+  arrowpluscircle: PlusCircleIcon,
   moon: Moon,
   search: Search,
   codesanbox: Codesandbox,
