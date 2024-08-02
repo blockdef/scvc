@@ -803,6 +803,10 @@
   </g>
 </svg> -->
 
+<!-- 
+  
+The ORIGINAL ONE:
+
 <svg width="100%" height="100%" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
   <rect width="100%" height="100%" fill="hsl(215.3,19.3%,34.5%)"/>
 
@@ -835,7 +839,6 @@
   </g>
 
   <g fill="#FFFF" filter="url(#neon-glow)">
-    <!-- Circles with updated sizes -->
     <circle cx="100" cy="100" r="1.5">
       <animate attributeName="r" values="1.5;4.5;1.5" dur="5s" repeatCount="indefinite"/>
     </circle>
@@ -855,7 +858,6 @@
       <animate attributeName="r" values="1.5;4.5;1.5" dur="15s" repeatCount="indefinite"/>
     </circle>
 
-    <!-- Additional circles with updated sizes -->
     <circle cx="100" cy="200" r="1.5">
       <animate attributeName="r" values="1.5;4.5;1.5" dur="17s" repeatCount="indefinite"/>
     </circle>
@@ -1005,6 +1007,815 @@
     </circle>
     <circle cx="700" cy="700" r="1.5">
       <animate attributeName="r" values="1.5;4.5;1.5" dur="111s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
+
+-->
+
+<!-- 
+  
+THE FIRST GRADIENT:
+
+<svg width="100%" height="100%" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="corner-light" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="black" />
+      <stop offset="100%" stop-color="hsl(0, 0%, 30%)" />
+    </radialGradient>
+    <filter id="neon-glow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  
+  <rect width="100%" height="100%" fill="url(#corner-light)"/>
+
+  <g stroke="#3333" stroke-width="1" stroke-linecap="round" filter="url(#neon-glow)">
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="0" y1="500" x2="800" y2="500"/>
+    <line x1="0" y1="600" x2="800" y2="600"/>
+    <line x1="0" y1="700" x2="800" y2="700"/>
+
+    <line x1="100" y1="0" x2="100" y2="800"/>
+    <line x1="200" y1="0" x2="200" y2="800"/>
+    <line x1="300" y1="0" x2="300" y2="800"/>
+    <line x1="400" y1="0" x2="400" y2="800"/>
+    <line x1="500" y1="0" x2="500" y2="800"/>
+    <line x1="600" y1="0" x2="600" y2="800"/>
+    <line x1="700" y1="0" x2="700" y2="800"/>
+  </g>
+
+  <g fill="#FFFF" filter="url(#neon-glow)">
+  </g>
+</svg>
+
+-->
+
+
+
+<!-- 
+  
+  BLUEISH GRADIENT WITH SLOW DOTS
+  
+  <svg width="100%" height="100%" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="neon-glow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <linearGradient id="top-left-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="hsl(210, 20%, 10%)" stop-opacity="0"/>
+      <stop offset="100%" stop-color="hsl(210, 20%, 20%)" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <linearGradient id="top-right-gradient" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="hsl(210, 20%, 10%)" stop-opacity="0"/>
+      <stop offset="100%" stop-color="hsl(210, 20%, 20%)" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <linearGradient id="bottom-left-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="hsl(210, 20%, 10%)" stop-opacity="0"/>
+      <stop offset="100%" stop-color="hsl(210, 20%, 20%)" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <linearGradient id="bottom-right-gradient" x1="100%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="hsl(210, 20%, 10%)" stop-opacity="0"/>
+      <stop offset="100%" stop-color="hsl(210, 20%, 20%)" stop-opacity="0.8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="50%" height="50%" fill="url(#top-left-gradient)"/>
+  <rect x="50%" y="0" width="50%" height="50%" fill="url(#top-right-gradient)"/>
+  <rect x="0" y="50%" width="50%" height="50%" fill="url(#bottom-left-gradient)"/>
+  <rect x="50%" y="50%" width="50%" height="50%" fill="url(#bottom-right-gradient)"/>
+
+  <g stroke="#3333" stroke-width="1" stroke-linecap="round" filter="url(#neon-glow)">
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="0" y1="500" x2="800" y2="500"/>
+    <line x1="0" y1="600" x2="800" y2="600"/>
+    <line x1="0" y1="700" x2="800" y2="700"/>
+
+    <line x1="100" y1="0" x2="100" y2="800"/>
+    <line x1="200" y1="0" x2="200" y2="800"/>
+    <line x1="300" y1="0" x2="300" y2="800"/>
+    <line x1="400" y1="0" x2="400" y2="800"/>
+    <line x1="500" y1="0" x2="500" y2="800"/>
+    <line x1="600" y1="0" x2="600" y2="800"/>
+    <line x1="700" y1="0" x2="700" y2="800"/>
+  </g>
+
+  <g fill="#FFFF" filter="url(#neon-glow)">
+    <circle cx="100" cy="100" r="1">
+      <animate attributeName="r" values="1;3;1" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="300" r="1">
+      <animate attributeName="r" values="1;3;1" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="500" cy="500" r="1">
+      <animate attributeName="r" values="1;3;1" dur="9s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="700" r="1">
+      <animate attributeName="r" values="1;3;1" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="500" r="1">
+      <animate attributeName="r" values="1;3;1" dur="13s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="200" r="1">
+      <animate attributeName="r" values="1;3;1" dur="15s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="100" cy="200" r="1">
+      <animate attributeName="r" values="1;3;1" dur="17s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="100" cy="300" r="1">
+      <animate attributeName="r" values="1;3;1" dur="19s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="100" cy="400" r="1">
+      <animate attributeName="r" values="1;3;1" dur="21s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="100" cy="500" r="1">
+      <animate attributeName="r" values="1;3;1" dur="23s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="100" cy="600" r="1">
+      <animate attributeName="r" values="1;3;1" dur="25s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="100" cy="700" r="1">
+      <animate attributeName="r" values="1;3;1" dur="27s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="200" cy="100" r="1">
+      <animate attributeName="r" values="1;3;1" dur="29s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="200" r="1">
+      <animate attributeName="r" values="1;3;1" dur="31s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="300" r="1">
+      <animate attributeName="r" values="1;3;1" dur="33s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="400" r="1">
+      <animate attributeName="r" values="1;3;1" dur="35s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="500" r="1">
+      <animate attributeName="r" values="1;3;1" dur="37s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="600" r="1">
+      <animate attributeName="r" values="1;3;1" dur="39s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="700" r="1">
+      <animate attributeName="r" values="1;3;1" dur="41s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="300" cy="100" r="1">
+      <animate attributeName="r" values="1;3;1" dur="43s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="200" r="1">
+      <animate attributeName="r" values="1;3;1" dur="45s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="300" r="1">
+      <animate attributeName="r" values="1;3;1" dur="47s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="400" r="1">
+      <animate attributeName="r" values="1;3;1" dur="49s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="500" r="1">
+      <animate attributeName="r" values="1;3;1" dur="51s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="600" r="1">
+      <animate attributeName="r" values="1;3;1" dur="53s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="700" r="1">
+      <animate attributeName="r" values="1;3;1" dur="55s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="400" cy="100" r="1">
+      <animate attributeName="r" values="1;3;1" dur="57s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="400" cy="200" r="1">
+      <animate attributeName="r" values="1;3;1" dur="59s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="400" cy="300" r="1">
+      <animate attributeName="r" values="1;3;1" dur="61s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="400" cy="400" r="1">
+      <animate attributeName="r" values="1;3;1" dur="63s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="400" cy="500" r="1">
+      <animate attributeName="r" values="1;3;1" dur="65s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="400" cy="600" r="1">
+      <animate attributeName="r" values="1;3;1" dur="67s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="400" cy="700" r="1">
+      <animate attributeName="r" values="1;3;1" dur="69s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="500" cy="100" r="1">
+      <animate attributeName="r" values="1;3;1" dur="71s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="500" cy="200" r="1">
+      <animate attributeName="r" values="1;3;1" dur="73s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="500" cy="300" r="1">
+      <animate attributeName="r" values="1;3;1" dur="75s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="500" cy="400" r="1">
+      <animate attributeName="r" values="1;3;1" dur="77s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="500" cy="500" r="1">
+      <animate attributeName="r" values="1;3;1" dur="79s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="500" cy="600" r="1">
+      <animate attributeName="r" values="1;3;1" dur="81s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="500" cy="700" r="1">
+      <animate attributeName="r" values="1;3;1" dur="83s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="600" cy="100" r="1">
+      <animate attributeName="r" values="1;3;1" dur="85s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="200" r="1">
+      <animate attributeName="r" values="1;3;1" dur="87s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="300" r="1">
+      <animate attributeName="r" values="1;3;1" dur="89s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="400" r="1">
+      <animate attributeName="r" values="1;3;1" dur="91s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="500" r="1">
+      <animate attributeName="r" values="1;3;1" dur="93s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="600" r="1">
+      <animate attributeName="r" values="1;3;1" dur="95s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="700" r="1">
+      <animate attributeName="r" values="1;3;1" dur="97s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="700" cy="100" r="1">
+      <animate attributeName="r" values="1;3;1" dur="99s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="200" r="1">
+      <animate attributeName="r" values="1;3;1" dur="101s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="300" r="1">
+      <animate attributeName="r" values="1;3;1" dur="103s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="400" r="1">
+      <animate attributeName="r" values="1;3;1" dur="105s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="500" r="1">
+      <animate attributeName="r" values="1;3;1" dur="107s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="600" r="1">
+      <animate attributeName="r" values="1;3;1" dur="109s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="700" r="1">
+      <animate attributeName="r" values="1;3;1" dur="111s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg> 
+ -->
+
+
+
+<!-- 
+
+  GRADINT BLACK WITH DOTS WITOUT ANIMATION:
+
+<svg width="100%" height="100%" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="corner-light" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="black" />
+      <stop offset="100%" stop-color="hsl(0, 0%, 30%)" />
+    </radialGradient>
+    <filter id="neon-glow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#corner-light)"/>
+
+  <g stroke="#3333" stroke-width="1" stroke-linecap="round" filter="url(#neon-glow)">
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="0" y1="500" x2="800" y2="500"/>
+    <line x1="0" y1="600" x2="800" y2="600"/>
+    <line x1="0" y1="700" x2="800" y2="700"/>
+
+    <line x1="100" y1="0" x2="100" y2="800"/>
+    <line x1="200" y1="0" x2="200" y2="800"/>
+    <line x1="300" y1="0" x2="300" y2="800"/>
+    <line x1="400" y1="0" x2="400" y2="800"/>
+    <line x1="500" y1="0" x2="500" y2="800"/>
+    <line x1="600" y1="0" x2="600" y2="800"/>
+    <line x1="700" y1="0" x2="700" y2="800"/>
+  </g>
+
+  <g fill="#FFFF" filter="url(#neon-glow)">
+    <circle cx="100" cy="100" r="1"/>
+    <circle cx="200" cy="100" r="1"/>
+    <circle cx="300" cy="100" r="1"/>
+    <circle cx="400" cy="100" r="1"/>
+    <circle cx="500" cy="100" r="1"/>
+    <circle cx="600" cy="100" r="1"/>
+    <circle cx="700" cy="100" r="1"/>
+
+    <circle cx="100" cy="200" r="1"/>
+    <circle cx="200" cy="200" r="1"/>
+    <circle cx="300" cy="200" r="1"/>
+    <circle cx="400" cy="200" r="1"/>
+    <circle cx="500" cy="200" r="1"/>
+    <circle cx="600" cy="200" r="1"/>
+    <circle cx="700" cy="200" r="1"/>
+
+    <circle cx="100" cy="300" r="1"/>
+    <circle cx="200" cy="300" r="1"/>
+    <circle cx="300" cy="300" r="1"/>
+    <circle cx="400" cy="300" r="1"/>
+    <circle cx="500" cy="300" r="1"/>
+    <circle cx="600" cy="300" r="1"/>
+    <circle cx="700" cy="300" r="1"/>
+
+    <circle cx="100" cy="400" r="1"/>
+    <circle cx="200" cy="400" r="1"/>
+    <circle cx="300" cy="400" r="1"/>
+    <circle cx="400" cy="400" r="1"/>
+    <circle cx="500" cy="400" r="1"/>
+    <circle cx="600" cy="400" r="1"/>
+    <circle cx="700" cy="400" r="1"/>
+
+    <circle cx="100" cy="500" r="1"/>
+    <circle cx="200" cy="500" r="1"/>
+    <circle cx="300" cy="500" r="1"/>
+    <circle cx="400" cy="500" r="1"/>
+    <circle cx="500" cy="500" r="1"/>
+    <circle cx="600" cy="500" r="1"/>
+    <circle cx="700" cy="500" r="1"/>
+
+    <circle cx="100" cy="600" r="1"/>
+    <circle cx="200" cy="600" r="1"/>
+    <circle cx="300" cy="600" r="1"/>
+    <circle cx="400" cy="600" r="1"/>
+    <circle cx="500" cy="600" r="1"/>
+    <circle cx="600" cy="600" r="1"/>
+    <circle cx="700" cy="600" r="1"/>
+
+    <circle cx="100" cy="700" r="1"/>
+    <circle cx="200" cy="700" r="1"/>
+    <circle cx="300" cy="700" r="1"/>
+    <circle cx="400" cy="700" r="1"/>
+    <circle cx="500" cy="700" r="1"/>
+    <circle cx="600" cy="700" r="1"/>
+    <circle cx="700" cy="700" r="1"/>
+
+    <circle cx="100" cy="100" r="1"/>
+    <circle cx="100" cy="200" r="1"/>
+    <circle cx="100" cy="300" r="1"/>
+    <circle cx="100" cy="400" r="1"/>
+    <circle cx="100" cy="500" r="1"/>
+    <circle cx="100" cy="600" r="1"/>
+    <circle cx="100" cy="700" r="1"/>
+
+    <circle cx="200" cy="100" r="1"/>
+    <circle cx="200" cy="200" r="1"/>
+    <circle cx="200" cy="300" r="1"/>
+    <circle cx="200" cy="400" r="1"/>
+    <circle cx="200" cy="500" r="1"/>
+    <circle cx="200" cy="600" r="1"/>
+    <circle cx="200" cy="700" r="1"/>
+
+    <circle cx="300" cy="100" r="1"/>
+    <circle cx="300" cy="200" r="1"/>
+    <circle cx="300" cy="300" r="1"/>
+    <circle cx="300" cy="400" r="1"/>
+    <circle cx="300" cy="500" r="1"/>
+    <circle cx="300" cy="600" r="1"/>
+    <circle cx="300" cy="700" r="1"/>
+
+    <circle cx="400" cy="100" r="1"/>
+    <circle cx="400" cy="200" r="1"/>
+    <circle cx="400" cy="300" r="1"/>
+    <circle cx="400" cy="400" r="1"/>
+    <circle cx="400" cy="500" r="1"/>
+    <circle cx="400" cy="600" r="1"/>
+    <circle cx="400" cy="700" r="1"/>
+
+    <circle cx="500" cy="100" r="1"/>
+    <circle cx="500" cy="200" r="1"/>
+    <circle cx="500" cy="300" r="1"/>
+    <circle cx="500" cy="400" r="1"/>
+    <circle cx="500" cy="500" r="1"/>
+    <circle cx="500" cy="600" r="1"/>
+    <circle cx="500" cy="700" r="1"/>
+
+    <circle cx="600" cy="100" r="1"/>
+    <circle cx="600" cy="200" r="1"/>
+    <circle cx="600" cy="300" r="1"/>
+    <circle cx="600" cy="400" r="1"/>
+    <circle cx="600" cy="500" r="1"/>
+    <circle cx="600" cy="600" r="1"/>
+    <circle cx="600" cy="700" r="1"/>
+
+    <circle cx="700" cy="100" r="1"/>
+    <circle cx="700" cy="200" r="1"/>
+    <circle cx="700" cy="300" r="1"/>
+    <circle cx="700" cy="400" r="1"/>
+    <circle cx="700" cy="500" r="1"/>
+    <circle cx="700" cy="600" r="1"/>
+    <circle cx="700" cy="700" r="1"/>
+  </g>
+</svg> 
+-->
+
+
+<!-- <svg width="100%" height="100%" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="corner-light" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="black" />
+      <stop offset="100%" stop-color="hsl(0, 0%, 30%)" />
+    </radialGradient>
+    <filter id="neon-glow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#corner-light)"/>
+
+  <g stroke="#3333" stroke-width="1" stroke-linecap="round" filter="url(#neon-glow)">
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="0" y1="500" x2="800" y2="500"/>
+    <line x1="0" y1="600" x2="800" y2="600"/>
+    <line x1="0" y1="700" x2="800" y2="700"/>
+
+    <line x1="100" y1="0" x2="100" y2="800"/>
+    <line x1="200" y1="0" x2="200" y2="800"/>
+    <line x1="300" y1="0" x2="300" y2="800"/>
+    <line x1="400" y1="0" x2="400" y2="800"/>
+    <line x1="500" y1="0" x2="500" y2="800"/>
+    <line x1="600" y1="0" x2="600" y2="800"/>
+    <line x1="700" y1="0" x2="700" y2="800"/>
+  </g>
+
+  <g fill="#FFFF" filter="url(#neon-glow)">
+    <circle cx="100" cy="100" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="0s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="0s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="100" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="0.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="0.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="100" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="0.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="0.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="400" cy="100" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="0.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="0.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="500" cy="100" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="0.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="0.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="100" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="100" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="1.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="1.2s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="100" cy="200" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="1.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="1.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="200" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="1.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="1.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="200" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="1.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="400" cy="200" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="500" cy="200" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="2.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="2.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="200" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="2.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="2.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="200" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="2.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="2.6s" repeatCount="indefinite"/>
+    </circle>
+    
+    <circle cx="100" cy="300" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="2.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="2.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="300" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="300" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="3.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="3.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="400" cy="300" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="3.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="3.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="500" cy="300" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="3.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="3.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="300" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="3.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="3.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="300" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
+ -->
+
+
+<svg width="100%" height="100%" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="corner-light" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="black" />
+      <stop offset="100%" stop-color="hsl(0, 0%, 20%)" />
+    </radialGradient>
+    <filter id="neon-glow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#corner-light)"/>
+
+  <g stroke="#3333" stroke-width="1" stroke-linecap="round" filter="url(#neon-glow)">
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="0" y1="500" x2="800" y2="500"/>
+    <line x1="0" y1="600" x2="800" y2="600"/>
+    <line x1="0" y1="700" x2="800" y2="700"/>
+
+    <line x1="100" y1="0" x2="100" y2="800"/>
+    <line x1="200" y1="0" x2="200" y2="800"/>
+    <line x1="300" y1="0" x2="300" y2="800"/>
+    <line x1="400" y1="0" x2="400" y2="800"/>
+    <line x1="500" y1="0" x2="500" y2="800"/>
+    <line x1="600" y1="0" x2="600" y2="800"/>
+    <line x1="700" y1="0" x2="700" y2="800"/>
+  </g>
+
+  <g fill="#FFFF" filter="url(#neon-glow)">
+
+    <circle cx="100" cy="100" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="0s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="0s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="100" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="0.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="0.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="100" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="0.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="0.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="400" cy="100" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="0.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="0.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="500" cy="100" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="0.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="0.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="100" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="100" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="1.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="1.2s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="100" cy="200" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="1.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="1.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="200" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="1.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="1.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="200" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="1.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="400" cy="200" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="500" cy="200" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="2.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="2.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="200" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="2.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="2.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="200" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="2.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="2.6s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="100" cy="300" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="2.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="2.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="300" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="300" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="3.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="3.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="400" cy="300" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="3.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="3.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="500" cy="300" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="3.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="3.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="300" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="3.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="3.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="300" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="4s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="100" cy="400" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="4.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="4.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="400" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="4.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="4.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="400" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="4.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="4.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="400" cy="400" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="4.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="4.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="500" cy="400" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="400" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="5.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="5.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="400" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="5.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="5.4s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="100" cy="500" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="5.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="5.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="500" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="5.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="5.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="500" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="400" cy="500" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="6.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="6.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="500" cy="500" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="6.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="6.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="500" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="6.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="6.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="500" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="6.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="6.8s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="100" cy="600" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="600" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="7.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="7.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="600" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="7.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="7.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="400" cy="600" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="7.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="7.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="500" cy="600" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="7.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="7.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="600" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="600" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="8.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="8.2s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="100" cy="700" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="8.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="8.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="700" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="8.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="8.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="700" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="8.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="8.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="400" cy="700" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="9s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="9s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="500" cy="700" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="9.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="9.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="700" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="9.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="9.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="700" r="1">
+      <animate attributeName="r" values="1;3;1" dur="2s" begin="9.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="9.6s" repeatCount="indefinite"/>
     </circle>
   </g>
 </svg>

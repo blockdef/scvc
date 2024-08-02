@@ -58,7 +58,7 @@ export default function Component() {
             <Button variant="outline" className="w-full bg-white border-white hover:bg-accent/25 text-black md:w-auto mr-[0.5rem]">
               Contribute
             </Button>
-            <Button variant="outline" className="w-full bg-accent/60 md:w-auto mx-[0.1rem]">
+            <Button variant="outline" className="w-full border-transparent text-black dark:text-white bg-[hsla(0,0%,100%,.15)] md:w-auto mx-[0.1rem]">
               Become a Member
             </Button>
           </div>

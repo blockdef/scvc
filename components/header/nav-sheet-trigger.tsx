@@ -79,25 +79,37 @@ export function NavSheetTrigger({ name, title, description, side, showIcon }: Na
           <div className="grid grid-cols-4 gap-2 mt-4">
             <div className="bg-[hsl(215.3,19.3%,34.5%)] p-6 rounded-md shadow-md hover:bg-cyan-700 flex flex-col justify-between h-48">
               <div className="flex flex-col justify-end h-full">
-                <h3 className="text-md font-bold text-white">Report a New SCVC</h3>
+                <h3 className="flex items-center text-md font-bold text-white space-x-2">
+                    <Icons.externalink className="size-4" />
+                    <span>Report a New SCVC</span>
+                  </h3>
                 <p className="text-sm mt-2 text-white">Submit a new Smart Contract Vulnerability Classification for analysis and categorization.</p>
               </div>
             </div>
             <div className="bg-[hsl(215.3,19.3%,34.5%)] p-6 rounded-md shadow-md hover:bg-cyan-700 flex flex-col justify-between h-48">
               <div className="flex flex-col justify-end h-full">
-                <h3 className="text-md font-bold text-white">Track Your Report</h3>
+                  <h3 className="flex items-center text-md font-bold text-white space-x-2">
+                    <Icons.externalink className="size-4" />
+                    <span> Track Your Report</span>
+                  </h3>
                 <p className="text-sm mt-2 text-white">Monitor the status of your submitted SCVC reports and view detailed updates.</p>
               </div>
             </div>
             <div className="bg-[hsl(215.3,19.3%,34.5%)] p-6 rounded-md shadow-md hover:bg-cyan-700 flex flex-col justify-between h-48">
               <div className="flex flex-col justify-end h-full">
-                <h3 className="text-md font-bold text-white">Contact Security Team</h3>
+                <h3 className="flex items-center text-md font-bold text-white space-x-2">
+                  <Icons.externalink className="size-4" />
+                  <span>Contact Security Team</span>
+                </h3>
                 <p className="text-sm mt-2 text-white">Reach out to our security experts for any queries or assistance related to SCVCs.</p>
               </div>
             </div>
             <div className="bg-[hsl(215.3,19.3%,34.5%)] p-6 rounded-md shadow-md hover:bg-cyan-700 flex flex-col justify-between h-48">
               <div className="flex flex-col justify-end h-full">
-                <h3 className="text-md font-bold text-white">View Recent Vulnerabilities</h3>
+                  <h3 className="flex items-center text-md font-bold text-white space-x-2">
+                    <Icons.externalink className="size-4" />
+                    <span>View Recent Vulnerabilities</span>
+                  </h3>
                 <p className="text-sm mt-2 text-white">Explore the latest smart contract vulnerabilities classified by our system.</p>
               </div>
             </div>
