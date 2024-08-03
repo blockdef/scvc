@@ -14,10 +14,11 @@ export function SiteHeader() {
   return (
     <header className="flex flex-col md:flew-row justify-between items-center gap-2 py-4 px-4 md:flex-row sticky top-0">
       <div className="flex">
-          <Button variant="link" className="-ml-2">
+          <Button variant="link" className="-ml-2 md:-mr-[7.5rem]">
             <Image src={logo} alt="logo" className="hidden dark:block" />
             <Image src={darklogo} alt="logo" className="block dark:hidden" />
           </Button>
+          <div>
           {headerButtonsData.map((config, index) => (
             <Button
               key={index}
@@ -27,6 +28,7 @@ export function SiteHeader() {
               {config.children}
             </Button>
           ))}
+          </div>
         <NavSheetTrigger
           side="top"
           showIcon={true}
