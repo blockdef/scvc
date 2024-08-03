@@ -1,6 +1,18 @@
 import {
+  ArrowBigDown,
+  Circle,
+  CircleEllipsis,
+  Codesandbox,
+  Copyright,
+  ExternalLink,
+  FileQuestion,
+  Linkedin,
+  LucideArrowDownCircle,
   LucideProps,
   Moon,
+  PlusCircleIcon,
+  Search,
+  Shield,
   SunMedium,
   Twitter,
   type Icon as LucideIcon,
@@ -10,7 +22,19 @@ export type Icon = LucideIcon
 
 export const Icons = {
   sun: SunMedium,
+  circle: Circle,
+  circlelipsis: CircleEllipsis,
+  arrowdowncircle: LucideArrowDownCircle,
+  arrowpluscircle: PlusCircleIcon,
   moon: Moon,
+  search: Search,
+  codesanbox: Codesandbox,
+  shield: Shield,
+  arrowdown: ArrowBigDown,
+  messagequestion: FileQuestion,
+  externalink: ExternalLink,
+  copyright: Copyright,
+  linkedin: Linkedin,
   twitter: Twitter,
   logo: (props: LucideProps) => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>

@@ -1,39 +1,42 @@
-import Link from "next/link"
+import { Button } from "@/components/ui/button"
 
-import { siteConfig } from "@/config/site"
-import { buttonVariants } from "@/components/ui/button"
-
-export default function IndexPage() {
+export default function LandingPage() {
   return (
-    <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
-      <div className="flex max-w-[980px] flex-col items-start gap-2">
-        <h1 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl">
-          Beautifully designed components <br className="hidden sm:inline" />
-          built with Radix UI and Tailwind CSS.
-        </h1>
-        <p className="max-w-[700px] text-lg text-muted-foreground">
-          Accessible and customizable components that you can copy and paste
-          into your apps. Free. Open Source. And Next.js 13 Ready.
-        </p>
-      </div>
-      <div className="flex gap-4">
-        <Link
-          href={siteConfig.links.docs}
-          target="_blank"
-          rel="noreferrer"
-          className={buttonVariants()}
-        >
-          Documentation
-        </Link>
-        <Link
-          target="_blank"
-          rel="noreferrer"
-          href={siteConfig.links.github}
-          className={buttonVariants({ variant: "outline" })}
-        >
-          GitHub
-        </Link>
-      </div>
-    </section>
+    <div>
+      <section className="relative flex items-center justify-center py-2 md:py-2 lg:py-2">
+        <div className="bg-body-grid rounded-xl bg-primary/80 p-60 pb-[28rem] shadow-lg max-w-[88rem] w-full relative">
+          <div className="space-y-4 text-center pt-6"></div>
+          <div className="absolute top-[31rem] left-4 transform -translate-y-3/4">
+            <p className="text-sm font-extrabold text-white">By BLOCKDEF</p>
+          </div>
+          <div className="absolute top-[39.5rem] left-4 transform -translate-y-1/2 max-w-96">
+            <p className="text-3xl font-medium text-white">
+              The Smart Contract Vulnerability Classifiction
+            </p>
+          </div>
+          <div className="absolute top-[36rem] right-4 transform -translate-y-1/2 max-w-72">
+            <p className="text-sm font-normal text-white">
+              The Smart Contract Vulnerability Classification is a comprehensive
+              framework designed to identify, categorize, and assess
+              vulnerabilities in smart contracts.
+            </p>
+          </div>
+          <div className="absolute top-[40.5rem] right-[2.4rem] transform -translate-y-1/2 max-w-72">
+            <Button
+              variant="outline"
+              className="w-full bg-white/90 border-transparent hover:opacity-50 text-black md:w-auto mr-[0.5rem]"
+            >
+              Contribute
+            </Button>
+            <Button
+              variant="outline"
+              className="w-full border-transparent text-white bg-black/70 hover:opacity-50 md:w-auto mx-[0.1rem]"
+            >
+              Go to BLOCKDEF
+            </Button>
+          </div>
+        </div>
+      </section>
+    </div>
   )
 }
