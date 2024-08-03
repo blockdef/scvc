@@ -73,3 +73,19 @@
   background: url('/bg-background-grid.svg') no-repeat center center fixed;
   background-size: cover;
 }
+
+.bg-cards-header-grid {
+  /* Initial background setting, if needed */
+  background: linear-gradient(135deg, 
+  hsl(240 3.7% 20%) 0%,   /* Darker color */
+  hsl(240 3.7% 25%) 50%,  /* Slightly lighter */
+  hsl(240 3.7% 35%) 100%  /* Even lighter */
+);
+  background-size: cover;
+}
+
+.bg-cards-header-grid:hover {
+  background: hsl(193, 57%, 25%);
+  background-size: cover;
+  transition: background 0.8s ease-in-out;
+}

@@ -58,7 +58,7 @@ export function NavSheetTrigger({ name, title, description, side, showIcon }: Na
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="outline" className="w-full font-bold bg-accent md:w-auto mx-[0.1rem] hover:bg-white hover:text-black">
+        <Button variant="outline" className="w-full font-bold bg-accent border-transparent hover:bg-[#3333] md:w-auto mx-[0.1rem]  dark:hover:bg-white hover:text-black">
           {showIcon && <Icons.arrowpluscircle className="size-3 mr-1" />}
           {name}
         </Button>
@@ -77,7 +77,7 @@ export function NavSheetTrigger({ name, title, description, side, showIcon }: Na
           </div>
         ) : (
           <div className="grid grid-cols-4 gap-2 mt-4">
-            <div className="bg-[hsl(215.3,19.3%,34.5%)] p-6 rounded-md shadow-md hover:bg-cyan-700 flex flex-col justify-between h-48">
+            <div className="bg-cards-header-grid p-6 rounded-md shadow-md flex flex-col justify-between h-48 cursor-pointer">
               <div className="flex flex-col justify-end h-full">
                 <h3 className="flex items-center text-md font-bold text-white space-x-2">
                     <Icons.externalink className="size-4" />
@@ -86,7 +86,7 @@ export function NavSheetTrigger({ name, title, description, side, showIcon }: Na
                 <p className="text-sm mt-2 text-white">Submit a new Smart Contract Vulnerability Classification for analysis and categorization.</p>
               </div>
             </div>
-            <div className="bg-[hsl(215.3,19.3%,34.5%)] p-6 rounded-md shadow-md hover:bg-cyan-700 flex flex-col justify-between h-48">
+            <div className="bg-cards-header-grid p-6 rounded-md shadow-md flex flex-col justify-between h-48 cursor-pointer">
               <div className="flex flex-col justify-end h-full">
                   <h3 className="flex items-center text-md font-bold text-white space-x-2">
                     <Icons.externalink className="size-4" />
@@ -95,7 +95,7 @@ export function NavSheetTrigger({ name, title, description, side, showIcon }: Na
                 <p className="text-sm mt-2 text-white">Monitor the status of your submitted SCVC reports and view detailed updates.</p>
               </div>
             </div>
-            <div className="bg-[hsl(215.3,19.3%,34.5%)] p-6 rounded-md shadow-md hover:bg-cyan-700 flex flex-col justify-between h-48">
+            <div className="bg-cards-header-grid p-6 rounded-md shadow-md flex flex-col justify-between h-48 cursor-pointer">
               <div className="flex flex-col justify-end h-full">
                 <h3 className="flex items-center text-md font-bold text-white space-x-2">
                   <Icons.externalink className="size-4" />
@@ -104,7 +104,7 @@ export function NavSheetTrigger({ name, title, description, side, showIcon }: Na
                 <p className="text-sm mt-2 text-white">Reach out to our security experts for any queries or assistance related to SCVCs.</p>
               </div>
             </div>
-            <div className="bg-[hsl(215.3,19.3%,34.5%)] p-6 rounded-md shadow-md hover:bg-cyan-700 flex flex-col justify-between h-48">
+            <div className="bg-cards-header-grid p-6 rounded-md shadow-md flex flex-col justify-between h-48 cursor-pointer">
               <div className="flex flex-col justify-end h-full">
                   <h3 className="flex items-center text-md font-bold text-white space-x-2">
                     <Icons.externalink className="size-4" />

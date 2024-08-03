@@ -13,7 +13,7 @@ export function ThemeToggle() {
     <Button
       variant="outline"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-      className="bg-accent md:w-auto mx-[0.1rem] hover:bg-white hover:text-black"
+      className="w-full font-bold bg-accent border-transparent hover:bg-[#3333] md:w-auto mx-[0.1rem] dark:hover:bg-white hover:text-black"
     >
       <Sun className="size-4 dark:hidden" />
       <Moon className="hidden size-4 dark:block" />

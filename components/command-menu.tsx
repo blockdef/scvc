@@ -62,7 +62,7 @@ export function CommandMenu({ ...props }: DialogProps) {
       <Button
         variant="outline"
         className={cn(
-          "bg-accent dark:bg-white dark:text-black w-full mx-[0.1rem]"
+          "w-full font-bold border-transparent md:w-auto mx-[0.1rem] hover:bg-[#3333] dark:text-black bg-accent dark:bg-white/90 dark:hover:bg-white hover:text-black"
         )}
         onClick={() => setOpen(true)}
         {...props}
