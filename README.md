@@ -69,4 +69,4 @@ If you encounter any issues or have questions, please open an issue on GitHub or
 
 ---
 
-Built with ❤️ by the SCVC team and contributors. Explore more at [BLOCKDEF](https://blockdef.dev).
+Built with ❤️ by the BLOCKDEF foundation and contributors. Explore more at [BLOCKDEF](https://blockdef.dev).

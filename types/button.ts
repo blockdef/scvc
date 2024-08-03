@@ -7,7 +7,7 @@ export type ButtonConfig = {
     | "secondary"
     | "ghost"
     | null
-    | undefined // You can add other variants as needed
+    | undefined
   className: string
   children: string
 }

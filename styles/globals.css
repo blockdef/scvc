@@ -75,11 +75,10 @@
 }
 
 .bg-cards-header-grid {
-  /* Initial background setting, if needed */
-  background: linear-gradient(135deg, 
-  hsl(240 3.7% 20%) 0%,   /* Darker color */
-  hsl(240 3.7% 25%) 50%,  /* Slightly lighter */
-  hsl(240 3.7% 35%) 100%  /* Even lighter */
+  background: linear-gradient(135deg,
+  hsl(240 3.7% 20%) 0%,
+  hsl(240 3.7% 25%) 50%,
+  hsl(240 3.7% 35%) 100%
 );
   background-size: cover;
 }
