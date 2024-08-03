@@ -15,20 +15,18 @@ export function SiteHeader() {
     <header className="flex flex-col md:flew-row justify-between items-center gap-2 py-4 px-4 md:flex-row sticky top-0">
       <div className="flex">
         <Button variant="link" className="-ml-2">
-          <Image src={logo} alt="logo" className="hidden dark:block" />
-          <Image src={darklogo} alt="logo" className="block dark:hidden" />
-        </Button>
-        <div className="-ml-[0.25rem]">
-          {headerButtonsData.map((config, index) => (
-            <Button
-              key={index}
-              variant={config.variant}
-              className={config.className}
-            >
-              {config.children}
-            </Button>
-          ))}
-        </div>
+            <Image src={logo} alt="logo" className="hidden dark:block" />
+            <Image src={darklogo} alt="logo" className="block dark:hidden" />
+          </Button>
+          <Button variant="outline" className="dark:bg-red w-full font-bold bg-accent md:w-auto mx-[0.1rem] -ml-[7.5rem] hover:bg-white hover:text-black">
+            About
+          </Button>
+          <Button variant="outline" className="w-full font-bold bg-accent md:w-auto mx-[0.1rem] hover:bg-white hover:text-black">
+            Support
+          </Button>
+          <Button variant="outline" className="w-full font-bold bg-accent md:w-auto mx-[0.1rem] hover:bg-white hover:text-black">
+            Changelog
+          </Button>
         <NavSheetTrigger
           side="top"
           showIcon={true}
