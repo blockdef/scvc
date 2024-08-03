@@ -1,5 +1,12 @@
-dist/*
-.cache
-public
+.next/*
+*.css
+dist
+esm/*
+public/*
+tests/*
+scripts/*
+*.config.js
 node_modules
-*.esm.js
+coverage
+.next
+build

@@ -10,16 +10,28 @@ export default function LandingPage() {
             <p className="text-sm font-extrabold text-white">By BLOCKDEF</p>
           </div>
           <div className="absolute top-[39.5rem] left-4 transform -translate-y-1/2 max-w-96">
-            <p className="text-3xl font-medium text-white">The Smart Contract Vulnerability Classifiction</p>
+            <p className="text-3xl font-medium text-white">
+              The Smart Contract Vulnerability Classifiction
+            </p>
           </div>
           <div className="absolute top-[36rem] right-4 transform -translate-y-1/2 max-w-72">
-            <p className="text-sm font-normal text-white">The Smart Contract Vulnerability Classification is a comprehensive framework designed to identify, categorize, and assess vulnerabilities in smart contracts.</p>
+            <p className="text-sm font-normal text-white">
+              The Smart Contract Vulnerability Classification is a comprehensive
+              framework designed to identify, categorize, and assess
+              vulnerabilities in smart contracts.
+            </p>
           </div>
           <div className="absolute top-[40.5rem] right-[2.4rem] transform -translate-y-1/2 max-w-72">
-            <Button variant="outline" className="w-full bg-white/90 border-transparent hover:opacity-50 text-black md:w-auto mr-[0.5rem]">
+            <Button
+              variant="outline"
+              className="w-full bg-white/90 border-transparent hover:opacity-50 text-black md:w-auto mr-[0.5rem]"
+            >
               Contribute
             </Button>
-            <Button variant="outline" className="w-full border-transparent text-white bg-black/70 hover:opacity-50 md:w-auto mx-[0.1rem]">
+            <Button
+              variant="outline"
+              className="w-full border-transparent text-white bg-black/70 hover:opacity-50 md:w-auto mx-[0.1rem]"
+            >
               Go to BLOCKDEF
             </Button>
           </div>

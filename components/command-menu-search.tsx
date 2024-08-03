@@ -12,6 +12,7 @@ import {
 } from "lucide-react"
 import { useTheme } from "next-themes"
 
+import { docsConfig } from "@/config/docs"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import {
@@ -23,7 +24,6 @@ import {
   CommandList,
   CommandSeparator,
 } from "@/components/ui/command"
-import { docsConfig } from "@/config/docs"
 import { Icons } from "@/components/icons"
 
 export function CommandMenuSearch({ ...props }: DialogProps) {
