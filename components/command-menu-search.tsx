@@ -26,7 +26,7 @@ import {
 import { docsConfig } from "@/config/docs"
 import { Icons } from "@/components/icons"
 
-export function CommandMenu({ ...props }: DialogProps) {
+export function CommandMenuSearch({ ...props }: DialogProps) {
   const router = useRouter()
   const [open, setOpen] = React.useState(false)
   const { setTheme } = useTheme()
