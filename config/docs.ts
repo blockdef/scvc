@@ -8,332 +8,166 @@ export interface DocsConfig {
 export const docsConfig: DocsConfig = {
   mainNav: [
     {
-      title: "Documentation",
-      href: "/docs",
+      title: "Home",
+      href: "/home",
     },
     {
-      title: "Components",
-      href: "/docs/components/accordion",
+      title: "Vulnerabilities",
+      href: "/vulnerabilities",
     },
     {
-      title: "Blocks",
-      href: "/blocks",
+      title: "Guides",
+      href: "/guides",
     },
     {
-      title: "Charts",
-      href: "/charts",
+      title: "Tools",
+      href: "/tools",
     },
     {
-      title: "Themes",
-      href: "/themes",
+      title: "Resources",
+      href: "/resources",
     },
     {
       title: "Examples",
       href: "/examples",
     },
     {
-      title: "Colors",
-      href: "/colors",
+      title: "FAQs",
+      href: "/faqs",
     },
   ],
   sidebarNav: [
     {
-      title: "Getting Started",
+      title: "Overview",
       items: [
         {
           title: "Introduction",
-          href: "/docs",
+          href: "/home",
           items: [],
         },
         {
-          title: "Installation",
-          href: "/docs/installation",
+          title: "Smart Contract Basics",
+          href: "/home/smart-contract-basics",
           items: [],
         },
         {
-          title: "components.json",
-          href: "/docs/components-json",
-          items: [],
-        },
-        {
-          title: "Theming",
-          href: "/docs/theming",
-          items: [],
-        },
-        {
-          title: "Dark mode",
-          href: "/docs/dark-mode",
-          items: [],
-        },
-        {
-          title: "CLI",
-          href: "/docs/cli",
-          items: [],
-        },
-        {
-          title: "Typography",
-          href: "/docs/components/typography",
-          items: [],
-        },
-        {
-          title: "Figma",
-          href: "/docs/figma",
-          items: [],
-        },
-        {
-          title: "Changelog",
-          href: "/docs/changelog",
+          title: "Security Principles",
+          href: "/home/security-principles",
           items: [],
         },
       ],
     },
     {
-      title: "Components",
+      title: "Vulnerabilities",
       items: [
         {
-          title: "Accordion",
-          href: "/docs/components/accordion",
+          title: "Reentrancy",
+          href: "/vulnerabilities/reentrancy",
           items: [],
         },
         {
-          title: "Alert",
-          href: "/docs/components/alert",
+          title: "Integer Overflow/Underflow",
+          href: "/vulnerabilities/integer-overflow-underflow",
           items: [],
         },
         {
-          title: "Alert Dialog",
-          href: "/docs/components/alert-dialog",
+          title: "Unchecked Call Return Value",
+          href: "/vulnerabilities/unchecked-call-return-value",
           items: [],
         },
         {
-          title: "Aspect Ratio",
-          href: "/docs/components/aspect-ratio",
+          title: "Denial of Service",
+          href: "/vulnerabilities/denial-of-service",
           items: [],
         },
         {
-          title: "Avatar",
-          href: "/docs/components/avatar",
+          title: "Front-Running",
+          href: "/vulnerabilities/front-running",
           items: [],
         },
         {
-          title: "Badge",
-          href: "/docs/components/badge",
+          title: "Timestamp Dependence",
+          href: "/vulnerabilities/timestamp-dependence",
           items: [],
         },
         {
-          title: "Breadcrumb",
-          href: "/docs/components/breadcrumb",
+          title: "Delegatecall Injection",
+          href: "/vulnerabilities/delegatecall-injection",
           items: [],
         },
         {
-          title: "Button",
-          href: "/docs/components/button",
+          title: "Access Control",
+          href: "/vulnerabilities/access-control",
           items: [],
         },
         {
-          title: "Calendar",
-          href: "/docs/components/calendar",
+          title: "Other Vulnerabilities",
+          href: "/vulnerabilities/other",
+          items: [],
+        },
+      ],
+    },
+    {
+      title: "Guides",
+      items: [
+        {
+          title: "Writing Secure Contracts",
+          href: "/guides/writing-secure-contracts",
           items: [],
         },
         {
-          title: "Card",
-          href: "/docs/components/card",
+          title: "Testing and Auditing",
+          href: "/guides/testing-and-auditing",
           items: [],
         },
         {
-          title: "Carousel",
-          href: "/docs/components/carousel",
+          title: "Best Practices",
+          href: "/guides/best-practices",
+          items: [],
+        },
+      ],
+    },
+    {
+      title: "Tools",
+      items: [
+        {
+          title: "Static Analysis Tools",
+          href: "/tools/static-analysis",
           items: [],
         },
         {
-          title: "Chart",
-          href: "/docs/components/chart",
-          label: "New",
+          title: "Dynamic Analysis Tools",
+          href: "/tools/dynamic-analysis",
           items: [],
         },
         {
-          title: "Checkbox",
-          href: "/docs/components/checkbox",
+          title: "Fuzz Testing Tools",
+          href: "/tools/fuzz-testing",
           items: [],
         },
         {
-          title: "Collapsible",
-          href: "/docs/components/collapsible",
+          title: "Formal Verification Tools",
+          href: "/tools/formal-verification",
+          items: [],
+        },
+      ],
+    },
+    {
+      title: "Resources",
+      items: [
+        {
+          title: "Whitepapers",
+          href: "/resources/whitepapers",
           items: [],
         },
         {
-          title: "Combobox",
-          href: "/docs/components/combobox",
+          title: "Case Studies",
+          href: "/resources/case-studies",
           items: [],
         },
         {
-          title: "Command",
-          href: "/docs/components/command",
-          items: [],
-        },
-        {
-          title: "Context Menu",
-          href: "/docs/components/context-menu",
-          items: [],
-        },
-        {
-          title: "Data Table",
-          href: "/docs/components/data-table",
-          items: [],
-        },
-        {
-          title: "Date Picker",
-          href: "/docs/components/date-picker",
-          items: [],
-        },
-        {
-          title: "Dialog",
-          href: "/docs/components/dialog",
-          items: [],
-        },
-        {
-          title: "Drawer",
-          href: "/docs/components/drawer",
-          items: [],
-        },
-        {
-          title: "Dropdown Menu",
-          href: "/docs/components/dropdown-menu",
-          items: [],
-        },
-        {
-          title: "Form",
-          href: "/docs/components/form",
-          items: [],
-        },
-        {
-          title: "Hover Card",
-          href: "/docs/components/hover-card",
-          items: [],
-        },
-        {
-          title: "Input",
-          href: "/docs/components/input",
-          items: [],
-        },
-        {
-          title: "Input OTP",
-          href: "/docs/components/input-otp",
-          items: [],
-        },
-        {
-          title: "Label",
-          href: "/docs/components/label",
-          items: [],
-        },
-        {
-          title: "Menubar",
-          href: "/docs/components/menubar",
-          items: [],
-        },
-        {
-          title: "Navigation Menu",
-          href: "/docs/components/navigation-menu",
-          items: [],
-        },
-        {
-          title: "Pagination",
-          href: "/docs/components/pagination",
-          items: [],
-        },
-        {
-          title: "Popover",
-          href: "/docs/components/popover",
-          items: [],
-        },
-        {
-          title: "Progress",
-          href: "/docs/components/progress",
-          items: [],
-        },
-        {
-          title: "Radio Group",
-          href: "/docs/components/radio-group",
-          items: [],
-        },
-        {
-          title: "Resizable",
-          href: "/docs/components/resizable",
-          items: [],
-        },
-        {
-          title: "Scroll Area",
-          href: "/docs/components/scroll-area",
-          items: [],
-        },
-        {
-          title: "Select",
-          href: "/docs/components/select",
-          items: [],
-        },
-        {
-          title: "Separator",
-          href: "/docs/components/separator",
-          items: [],
-        },
-        {
-          title: "Sheet",
-          href: "/docs/components/sheet",
-          items: [],
-        },
-        {
-          title: "Skeleton",
-          href: "/docs/components/skeleton",
-          items: [],
-        },
-        {
-          title: "Slider",
-          href: "/docs/components/slider",
-          items: [],
-        },
-        {
-          title: "Sonner",
-          href: "/docs/components/sonner",
-          items: [],
-        },
-        {
-          title: "Switch",
-          href: "/docs/components/switch",
-          items: [],
-        },
-        {
-          title: "Table",
-          href: "/docs/components/table",
-          items: [],
-        },
-        {
-          title: "Tabs",
-          href: "/docs/components/tabs",
-          items: [],
-        },
-        {
-          title: "Textarea",
-          href: "/docs/components/textarea",
-          items: [],
-        },
-        {
-          title: "Toast",
-          href: "/docs/components/toast",
-          items: [],
-        },
-        {
-          title: "Toggle",
-          href: "/docs/components/toggle",
-          items: [],
-        },
-        {
-          title: "Toggle Group",
-          href: "/docs/components/toggle-group",
-          items: [],
-        },
-        {
-          title: "Tooltip",
-          href: "/docs/components/tooltip",
+          title: "External References",
+          href: "/resources/external-references",
           items: [],
         },
       ],
