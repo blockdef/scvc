@@ -18,7 +18,7 @@ export function SiteHeader() {
           <Image src={logo} alt="logo" className="hidden dark:block" />
           <Image src={darklogo} alt="logo" className="block dark:hidden" />
         </Button>
-        <div className="ml-[0.25rem]">
+        <div className="-ml-[7.5rem]">
           {headerButtonsData.map((config, index) => (
             <Button
               key={index}
