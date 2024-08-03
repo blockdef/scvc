@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { headerButtonsData } from "@/content/header-buttons"
+import { headerButtonsData } from "@/content/header/header-buttons"
 
 import { Button } from "@/components/ui/button"
 import { CommandMenuSearch } from "@/components/command-menu-search"
@@ -18,7 +18,7 @@ export function SiteHeader() {
           <Image src={logo} alt="logo" className="hidden dark:block" />
           <Image src={darklogo} alt="logo" className="block dark:hidden" />
         </Button>
-        <div>
+        <div className="ml-[0.25rem]">
           {headerButtonsData.map((config, index) => (
             <Button
               key={index}

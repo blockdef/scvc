@@ -1,16 +1,15 @@
 import { Button } from "@/components/ui/button"
 import {
   Sheet,
-  SheetClose,
   SheetContent,
   SheetDescription,
-  SheetFooter,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { SidebarNav } from "@/components/header/sidebar-nav"
 import { Icons } from "@/components/icons"
+import { headerCardData } from "@/content/header/header-cards"
 
 interface NavSheetTriggerProps {
   name: string
@@ -81,54 +80,19 @@ export function NavSheetTrigger({
           </div>
         ) : (
           <div className="grid grid-cols-4 gap-2 mt-4">
-            <div className="bg-cards-header-grid p-6 rounded-md shadow-md flex flex-col justify-between h-48 cursor-pointer">
-              <div className="flex flex-col justify-end h-full">
-                <h3 className="flex items-center text-md font-bold text-white space-x-2">
-                  <Icons.externalink className="size-4" />
-                  <span>Report a New SCVC</span>
-                </h3>
-                <p className="text-sm mt-2 text-white">
-                  Submit a new Smart Contract Vulnerability Classification for
-                  analysis and categorization.
-                </p>
+            {headerCardData.map((card, index) => (
+              <div key={index} className="bg-cards-header-grid p-6 rounded-md shadow-md flex flex-col justify-between h-48 cursor-pointer">
+                <div className="flex flex-col justify-end h-full">
+                  <h3 className="flex items-center text-md font-bold text-white space-x-2">
+                    <Icons.externalink className="size-4" />
+                    <span>{card.title}</span>
+                  </h3>
+                  <p className="text-sm mt-2 text-white">
+                    {card.description}
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="bg-cards-header-grid p-6 rounded-md shadow-md flex flex-col justify-between h-48 cursor-pointer">
-              <div className="flex flex-col justify-end h-full">
-                <h3 className="flex items-center text-md font-bold text-white space-x-2">
-                  <Icons.externalink className="size-4" />
-                  <span> Track Your Report</span>
-                </h3>
-                <p className="text-sm mt-2 text-white">
-                  Monitor the status of your submitted SCVC reports and view
-                  detailed updates.
-                </p>
-              </div>
-            </div>
-            <div className="bg-cards-header-grid p-6 rounded-md shadow-md flex flex-col justify-between h-48 cursor-pointer">
-              <div className="flex flex-col justify-end h-full">
-                <h3 className="flex items-center text-md font-bold text-white space-x-2">
-                  <Icons.externalink className="size-4" />
-                  <span>Contact Security Team</span>
-                </h3>
-                <p className="text-sm mt-2 text-white">
-                  Reach out to our security experts for any queries or
-                  assistance related to SCVCs.
-                </p>
-              </div>
-            </div>
-            <div className="bg-cards-header-grid p-6 rounded-md shadow-md flex flex-col justify-between h-48 cursor-pointer">
-              <div className="flex flex-col justify-end h-full">
-                <h3 className="flex items-center text-md font-bold text-white space-x-2">
-                  <Icons.externalink className="size-4" />
-                  <span>View Recent Vulnerabilities</span>
-                </h3>
-                <p className="text-sm mt-2 text-white">
-                  Explore the latest smart contract vulnerabilities classified
-                  by our system.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         )}
       </SheetContent>
