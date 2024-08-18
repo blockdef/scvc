@@ -51,7 +51,7 @@ interface VulnerabilityProps {
 export function Vulnerability({
   applications,
   scvcs,
-  defaultLayout = [20, 32, 48],
+  defaultLayout = [15, 30, 48],
   defaultCollapsed = false,
   navCollapsedSize,
 }: VulnerabilityProps) {
@@ -67,7 +67,7 @@ export function Vulnerability({
             sizes
           )}`
         }}
-        className="max-h-[800px] overflow-scroll items-stretch"
+        className="max-h-[1200px] overflow-scroll items-stretch"
       >
         <ResizablePanel
           defaultSize={defaultLayout[0]}
@@ -208,10 +208,10 @@ export function Vulnerability({
                 </div>
               </form>
             </div>
-            <TabsContent value="all" className="h-screen overflow-scroll items-stretch">
+            <TabsContent value="all" className="h-[80vh] overflow-scroll items-stretch">
               <VulnerabilityList items={scvcs} />
             </TabsContent>
-            <TabsContent value="unread" className="h-screen overflow-scroll items-stretch">
+            <TabsContent value="unread" className="h-[80vh] overflow-scroll items-stretch">
               <VulnerabilityList items={scvcs.filter((item) => !item.read)} />
             </TabsContent>
           </Tabs>
