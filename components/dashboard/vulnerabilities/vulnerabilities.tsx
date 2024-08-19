@@ -2,16 +2,15 @@
 
 import * as React from "react"
 import {
-  AlertCircle,
-  Archive,
-  File,
-  Inbox,
-  MessageSquare,
   Search,
-  Send,
-  ShoppingCart,
-  Trash2,
-  Users,
+  Settings,
+  Contact,
+  HelpCircle,
+  Hammer,
+  TrainIcon,
+  Bug,
+  PencilIcon,
+  Code
 } from "lucide-react"
 
 import { cn } from "@/lib/utils"
@@ -77,125 +76,104 @@ export function Vulnerability({
           maxSize={20}
           onCollapse={() => {
             setIsCollapsed(true)
-            document.cookie = `react-resizable-panels:collapsed=${JSON.stringify(
-              true
-            )}`
+            document.cookie = `react-resizable-panels:collapsed=${JSON.stringify(true)}`
           }}
           onResize={() => {
             setIsCollapsed(false)
-            document.cookie = `react-resizable-panels:collapsed=${JSON.stringify(
-              false
-            )}`
+            document.cookie = `react-resizable-panels:collapsed=${JSON.stringify(false)}`
           }}
-          className={cn(
-            isCollapsed &&
-              "min-w-[50px] transition-all duration-300 ease-in-out"
-          )}
+          className={cn(isCollapsed && "min-w-[50px] transition-all duration-300 ease-in-out")}
         >
-          <div
-            className={cn(
-              "flex h-[52px] items-center justify-center",
-              isCollapsed ? "h-[52px]" : "px-2"
-            )}
-          >
-            <ApplicationSwitcher isCollapsed={isCollapsed} applications={applications} />
+          <div className="flex flex-col h-full">
+            {/* Top Nav Section */}
+            <div className="flex-none">
+              <div className={cn("flex h-[52px] items-center justify-center", isCollapsed ? "h-[52px]" : "px-2")}>
+                <ApplicationSwitcher isCollapsed={isCollapsed} applications={applications} />
+              </div>
+              <Separator className="mt-1" />
+              <Nav
+                isCollapsed={isCollapsed}
+                links={[
+                  {
+                    title: "Vulnerabilities",
+                    label: "128",
+                    icon: Code,
+                    variant: "default",
+                  },
+                  {
+                    title: "Tutorials",
+                    label: "",
+                    icon: PencilIcon,
+                    variant: "ghost",
+                  },
+                  {
+                    title: "Bug Bounties",
+                    label: "",
+                    icon: Bug,
+                    variant: "ghost",
+                  },
+                  {
+                    title: "Courses",
+                    label: "",
+                    icon: TrainIcon,
+                    variant: "ghost",
+                  },
+                  {
+                    title: "Tools",
+                    label: "",
+                    icon: Hammer,
+                    variant: "ghost",
+                  },
+                ]}
+              />
+            </div>
+            {/* Spacer */}
+            <div className="flex-1"></div> {/* This will push the bottom nav to the bottom */}
+            {/* Bottom Nav Section */}
+            <div className="flex-none">
+              <Nav
+                isCollapsed={isCollapsed}
+                links={[
+                  {
+                    title: "Contribute",
+                    label: "",
+                    icon: HelpCircle,
+                    variant: "ghost",
+                  },
+                  {
+                    title: "Contact",
+                    label: "",
+                    icon: Contact,
+                    variant: "ghost",
+                  },
+                  {
+                    title: "Settings",
+                    label: "",
+                    icon: Settings,
+                    variant: "ghost",
+                  },
+                ]}
+              />
+            </div>
           </div>
-          <Separator className="mt-1" />
-          <Nav
-            isCollapsed={isCollapsed}
-            links={[
-              {
-                title: "Inbox",
-                label: "128",
-                icon: Inbox,
-                variant: "default",
-              },
-              {
-                title: "Drafts",
-                label: "9",
-                icon: File,
-                variant: "ghost",
-              },
-              {
-                title: "Sent",
-                label: "",
-                icon: Send,
-                variant: "ghost",
-              },
-              {
-                title: "Junk",
-                label: "23",
-                icon: Archive,
-                variant: "ghost",
-              },
-              {
-                title: "Trash",
-                label: "",
-                icon: Trash2,
-                variant: "ghost",
-              },
-              {
-                title: "Archive",
-                label: "",
-                icon: Archive,
-                variant: "ghost",
-              },
-            ]}
-          />
-          <Separator />
-          <Nav
-            isCollapsed={isCollapsed}
-            links={[
-              {
-                title: "Social",
-                label: "972",
-                icon: Users,
-                variant: "ghost",
-              },
-              {
-                title: "Updates",
-                label: "342",
-                icon: AlertCircle,
-                variant: "ghost",
-              },
-              {
-                title: "Forums",
-                label: "128",
-                icon: MessageSquare,
-                variant: "ghost",
-              },
-              {
-                title: "Shopping",
-                label: "8",
-                icon: ShoppingCart,
-                variant: "ghost",
-              },
-              {
-                title: "Promotions",
-                label: "21",
-                icon: Archive,
-                variant: "ghost",
-              },
-            ]}
-          />
         </ResizablePanel>
         <ResizableHandle withHandle />
         <ResizablePanel defaultSize={defaultLayout[1]} minSize={30} className="h-screen overflow-scroll items-stretch">
           <Tabs defaultValue="all">
             <div className="flex items-center px-4 py-2">
-              <h1 className="text-xl font-bold">SCVC</h1>
+              <h1 className="text-xl font-bold"></h1>
               <TabsList className="ml-auto">
                 <TabsTrigger
                   value="all"
                   className="text-zinc-600 dark:text-zinc-200"
                 >
-                  All SCVs
+                  Full List
                 </TabsTrigger>
                 <TabsTrigger
                   value="unread"
                   className="text-zinc-600 dark:text-zinc-200"
                 >
-                  Unread
+                  New
                 </TabsTrigger>
               </TabsList>
             </div>
