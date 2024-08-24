@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export default function LandingPage() {
   return (
@@ -21,19 +22,21 @@ export default function LandingPage() {
               vulnerabilities in smart contracts.
             </p>
           </div>
-          <div className="absolute top-[40.5rem] right-[2.4rem] transform -translate-y-1/2 max-w-72">
+          <div className="absolute top-[40.5rem] right-[4.7rem] transform -translate-y-1/2 max-w-72">
             <Button
               variant="outline"
-              className="w-full bg-white/90 border-transparent hover:opacity-50 text-black md:w-auto mr-[0.5rem]"
+              className="w-full bg-white/90 border-transparent hover:bg-gray-200 text-black hover:text-black md:w-auto mr-[0.5rem] shadow-xl shadow-black"
             >
               Contribute
             </Button>
-            <Button
-              variant="outline"
-              className="w-full border-transparent text-white bg-black/70 hover:opacity-50 md:w-auto mx-[0.1rem]"
-            >
-              Go to BLOCKDEF
-            </Button>
+            <Link href="/scvc-dashboard">
+              <Button
+                variant="outline"
+                className="w-full border-transparent text-white bg-black/70 hover:bg-gray-800 hover:text-white md:w-auto mx-[0.1rem] shadow-md shadow-slate-200"
+              >
+                Launch App
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
