@@ -13,6 +13,7 @@ import {
   Trash2,
 } from "lucide-react"
 
+import { getVulnerabilityByName } from "@/lib/mdx-content"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import { Calendar } from "@/components/ui/calendar"
@@ -35,26 +36,28 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
-import { getVulnerabilityByName } from "@/lib/mdx-content";
-import "highlight.js/styles/panda-syntax-dark.css";
+
+import "highlight.js/styles/panda-syntax-dark.css"
 
 interface VulnerabilityDisplayProps {
   scvc: SCVCS | null
 }
 
 async function fetchVulnerabilitiesDetails(slug: string) {
-  const data = await getVulnerabilityByName(`${slug}.mdx`);
-  return data;
+  const data = await getVulnerabilityByName(`${slug}.mdx`)
+  return data
 }
 
-export async function VulnerabilityDisplay({ scvc }: VulnerabilityDisplayProps) {
+export async function VulnerabilityDisplay({
+  scvc,
+}: VulnerabilityDisplayProps) {
   const today = new Date()
-  const scvcName = scvc?.name;
+  const scvcName = scvc?.name
   console.log(scvc?.name)
 
   const scvcContent = await fetchVulnerabilitiesDetails(
     scvcName?.toLowerCase() ?? "error-content"
-  );
+  )
 
   return (
     <div className="flex h-screen overflow-y-auto flex-col">
@@ -234,7 +237,8 @@ export async function VulnerabilityDisplay({ scvc }: VulnerabilityDisplayProps) 
                     htmlFor="mute"
                     className="flex items-center gap-2 text-xs font-normal"
                   >
-                    <Switch id="mute" aria-label="Mute thread" /> Add to my watchlist
+                    <Switch id="mute" aria-label="Mute thread" /> Add to my
+                    watchlist
                   </Label>
                   <Button
                     onClick={(e) => e.preventDefault()}

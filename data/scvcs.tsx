@@ -301,8 +301,6 @@ export const scvcs = [
   },
 ]
 
-
-
 export type SCVCS = (typeof scvcs)[number]
 
 export const applications = [
