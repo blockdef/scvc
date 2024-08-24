@@ -30,19 +30,31 @@ import {
 } from "@/components/ui/popover"
 import { Separator } from "@/components/ui/separator"
 import { Switch } from "@/components/ui/switch"
-import { Textarea } from "@/components/ui/textarea"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
+import { getVulnerabilityByName } from "@/lib/mdx-content";
+import "highlight.js/styles/panda-syntax-dark.css";
 
 interface VulnerabilityDisplayProps {
   scvc: SCVCS | null
 }
 
-export function VulnerabilityDisplay({ scvc }: VulnerabilityDisplayProps) {
+async function fetchVulnerabilitiesDetails(slug: string) {
+  const data = await getVulnerabilityByName(`${slug}.mdx`);
+  return data;
+}
+
+export async function VulnerabilityDisplay({ scvc }: VulnerabilityDisplayProps) {
   const today = new Date()
+  const scvcName = scvc?.name;
+  console.log(scvc?.name)
+
+  const scvcContent = await fetchVulnerabilitiesDetails(
+    scvcName?.toLowerCase() ?? "error-content"
+  );
 
   return (
     <div className="flex h-screen overflow-y-auto flex-col">
@@ -199,7 +211,7 @@ export function VulnerabilityDisplay({ scvc }: VulnerabilityDisplayProps) {
                 <div className="font-semibold">{scvc.name}</div>
                 <div className="line-clamp-1 text-xs">{scvc.subject}</div>
                 <div className="line-clamp-1 text-xs">
-                  <span className="font-medium">Reply-To:</span> {scvc.email}
+                  <span className="font-medium">Category:</span> {scvc.email}
                 </div>
               </div>
             </div>
@@ -210,31 +222,26 @@ export function VulnerabilityDisplay({ scvc }: VulnerabilityDisplayProps) {
             )}
           </div>
           <Separator />
-          <div className="flex-1 whitespace-pre-wrap p-4 text-sm">
-            {scvc.text}
+          <div className="mdx-content p-4 overflow-scroll prose prose-gray dark:prose-invert overflow-x-auto text-justify text-sm antialiased">
+            <article className="p-4">{scvcContent?.content}</article>
           </div>
           <Separator className="mt-auto" />
           <div className="p-4">
             <form>
               <div className="grid gap-4">
-                <Textarea
-                  className="p-4"
-                  placeholder={`Reply ${scvc.name}...`}
-                />
                 <div className="flex items-center">
                   <Label
                     htmlFor="mute"
                     className="flex items-center gap-2 text-xs font-normal"
                   >
-                    <Switch id="mute" aria-label="Mute thread" /> Mute this
-                    thread
+                    <Switch id="mute" aria-label="Mute thread" /> Add to my watchlist
                   </Label>
                   <Button
                     onClick={(e) => e.preventDefault()}
                     size="sm"
                     className="ml-auto"
                   >
-                    Send
+                    Share
                   </Button>
                 </div>
               </div>

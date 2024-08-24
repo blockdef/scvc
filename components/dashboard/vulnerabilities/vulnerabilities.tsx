@@ -41,7 +41,6 @@ interface VulnerabilityProps {
   defaultCollapsed?: boolean
   navCollapsedSize: number
 }
-
 export function Vulnerability({
   applications,
   scvcs,
@@ -217,6 +216,7 @@ export function Vulnerability({
         </ResizablePanel>
         <ResizableHandle withHandle />
         <ResizablePanel defaultSize={defaultLayout[2]}>
+          {/* @ts-expect-error Server Component */}
           <VulnerabilityDisplay
             scvc={scvcs.find((item) => item.id === scvc.selected) || null}
           />
