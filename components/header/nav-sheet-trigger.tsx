@@ -1,3 +1,5 @@
+import { headerCardData } from "@/content/header/header-cards"
+
 import { Button } from "@/components/ui/button"
 import {
   Sheet,
@@ -9,7 +11,6 @@ import {
 } from "@/components/ui/sheet"
 import { SidebarNav } from "@/components/header/sidebar-nav"
 import { Icons } from "@/components/icons"
-import { headerCardData } from "@/content/header/header-cards"
 
 interface NavSheetTriggerProps {
   name: string
@@ -81,15 +82,16 @@ export function NavSheetTrigger({
         ) : (
           <div className="grid grid-cols-4 gap-2 mt-4">
             {headerCardData.map((card, index) => (
-              <div key={index} className="bg-cards-header-grid p-6 rounded-md shadow-md flex flex-col justify-between h-48 cursor-pointer">
+              <div
+                key={index}
+                className="bg-cards-header-grid p-6 rounded-md shadow-md flex flex-col justify-between h-48 cursor-pointer"
+              >
                 <div className="flex flex-col justify-end h-full">
                   <h3 className="flex items-center text-md font-bold text-white space-x-2">
                     <Icons.externalink className="size-4" />
                     <span>{card.title}</span>
                   </h3>
-                  <p className="text-sm mt-2 text-white">
-                    {card.description}
-                  </p>
+                  <p className="text-sm mt-2 text-white">{card.description}</p>
                 </div>
               </div>
             ))}

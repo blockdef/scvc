@@ -1,8 +1,8 @@
 import { cookies } from "next/headers"
 import Image from "next/image"
+import { applications, scvcs } from "@/data/scvcs"
 
 import { Vulnerability } from "@/components/dashboard/vulnerabilities/vulnerabilities"
-import { applications, scvcs } from "@/data/scvcs"
 
 export default function MailPage() {
   const layout = cookies().get("react-resizable-panels:layout")

@@ -1,19 +1,21 @@
 "use client"
 
 import * as React from "react"
+import { type SCVCS } from "@/data/scvcs"
 import {
+  Bug,
+  Code,
+  Contact,
+  Hammer,
+  HelpCircle,
+  PencilIcon,
   Search,
   Settings,
-  Contact,
-  HelpCircle,
-  Hammer,
   TrainIcon,
-  Bug,
-  PencilIcon,
-  Code
 } from "lucide-react"
 
 import { cn } from "@/lib/utils"
+import { useVulnerability } from "@/hooks/use-vulnerability"
 import { Input } from "@/components/ui/input"
 import {
   ResizableHandle,
@@ -21,19 +23,12 @@ import {
   ResizablePanelGroup,
 } from "@/components/ui/resizable"
 import { Separator } from "@/components/ui/separator"
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/components/ui/tabs"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { TooltipProvider } from "@/components/ui/tooltip"
-import { ApplicationSwitcher } from "@/components/dashboard/vulnerabilities/application-switcher"
-import { VulnerabilityDisplay } from "@/components/dashboard/vulnerabilities/vulnerabilty-display"
-import { VulnerabilityList } from "@/components/dashboard/vulnerabilities/vulnerability-list"
 import { Nav } from "@/components/dashboard/nav/dashboard-navbar"
-import { type SCVCS } from "@/data/scvcs"
-import { useVulnerability } from "@/hooks/use-vulnerability"
+import { ApplicationSwitcher } from "@/components/dashboard/vulnerabilities/application-switcher"
+import { VulnerabilityList } from "@/components/dashboard/vulnerabilities/vulnerability-list"
+import { VulnerabilityDisplay } from "@/components/dashboard/vulnerabilities/vulnerabilty-display"
 
 interface VulnerabilityProps {
   applications: {
@@ -76,19 +71,34 @@ export function Vulnerability({
           maxSize={20}
           onCollapse={() => {
             setIsCollapsed(true)
-            document.cookie = `react-resizable-panels:collapsed=${JSON.stringify(true)}`
+            document.cookie = `react-resizable-panels:collapsed=${JSON.stringify(
+              true
+            )}`
           }}
           onResize={() => {
             setIsCollapsed(false)
-            document.cookie = `react-resizable-panels:collapsed=${JSON.stringify(false)}`
+            document.cookie = `react-resizable-panels:collapsed=${JSON.stringify(
+              false
+            )}`
           }}
-          className={cn(isCollapsed && "min-w-[50px] transition-all duration-300 ease-in-out")}
+          className={cn(
+            isCollapsed &&
+              "min-w-[50px] transition-all duration-300 ease-in-out"
+          )}
         >
           <div className="flex flex-col h-full">
             {/* Top Nav Section */}
             <div className="flex-none">
-              <div className={cn("flex h-[52px] items-center justify-center", isCollapsed ? "h-[52px]" : "px-2")}>
-                <ApplicationSwitcher isCollapsed={isCollapsed} applications={applications} />
+              <div
+                className={cn(
+                  "flex h-[52px] items-center justify-center",
+                  isCollapsed ? "h-[52px]" : "px-2"
+                )}
+              >
+                <ApplicationSwitcher
+                  isCollapsed={isCollapsed}
+                  applications={applications}
+                />
               </div>
               <Separator className="mt-1" />
               <Nav
@@ -128,7 +138,8 @@ export function Vulnerability({
               />
             </div>
             {/* Spacer */}
-            <div className="flex-1"></div> {/* This will push the bottom nav to the bottom */}
+            <div className="flex-1"></div>{" "}
+            {/* This will push the bottom nav to the bottom */}
             {/* Bottom Nav Section */}
             <div className="flex-none">
               <Nav
@@ -158,7 +169,11 @@ export function Vulnerability({
           </div>
         </ResizablePanel>
         <ResizableHandle withHandle />
-        <ResizablePanel defaultSize={defaultLayout[1]} minSize={30} className="h-screen overflow-scroll items-stretch">
+        <ResizablePanel
+          defaultSize={defaultLayout[1]}
+          minSize={30}
+          className="h-screen overflow-scroll items-stretch"
+        >
           <Tabs defaultValue="all">
             <div className="flex items-center px-4 py-2">
               <h1 className="text-xl font-bold"></h1>
@@ -186,10 +201,16 @@ export function Vulnerability({
                 </div>
               </form>
             </div>
-            <TabsContent value="all" className="h-[80vh] overflow-scroll items-stretch">
+            <TabsContent
+              value="all"
+              className="h-[80vh] overflow-scroll items-stretch"
+            >
               <VulnerabilityList items={scvcs} />
             </TabsContent>
-            <TabsContent value="unread" className="h-[80vh] overflow-scroll items-stretch">
+            <TabsContent
+              value="unread"
+              className="h-[80vh] overflow-scroll items-stretch"
+            >
               <VulnerabilityList items={scvcs.filter((item) => !item.read)} />
             </TabsContent>
           </Tabs>

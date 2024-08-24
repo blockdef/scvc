@@ -509,7 +509,7 @@ export const scvcs = [
     read: false,
     labels: ["solidity", "underflow", "important"],
   },
-];
+]
 
 export type SCVCS = (typeof scvcs)[number]
 
@@ -530,7 +530,10 @@ export const applications = [
     icon: (
       <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <title>Documentation</title>
-        <path d="M21 1H7a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zM7 3h14v18H7V3zm2 2h10v2H9V5zm0 4h10v2H9V9zm0 4h10v2H9v-2zm0 4h10v2H9v-2z" fill="currentColor" />
+        <path
+          d="M21 1H7a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zM7 3h14v18H7V3zm2 2h10v2H9V5zm0 4h10v2H9V9zm0 4h10v2H9v-2zm0 4h10v2H9v-2z"
+          fill="currentColor"
+        />
       </svg>
     ),
   },

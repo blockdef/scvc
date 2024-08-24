@@ -1,7 +1,8 @@
-import {addDays} from "date-fns/addDays"
-import {addHours} from "date-fns/addHours"
-import {format} from "date-fns/format"
-import {nextSaturday} from "date-fns/nextSaturday"
+import { SCVCS } from "@/data/scvcs"
+import { addDays } from "date-fns/addDays"
+import { addHours } from "date-fns/addHours"
+import { format } from "date-fns/format"
+import { nextSaturday } from "date-fns/nextSaturday"
 import {
   Archive,
   Clock,
@@ -12,19 +13,13 @@ import {
   Trash2,
 } from "lucide-react"
 
-import {
-  DropdownMenuContent,
-  DropdownMenuItem,
-} from "@/components/ui/dropdown-menu"
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/components/ui/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import { Calendar } from "@/components/ui/calendar"
 import {
   DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { Label } from "@/components/ui/label"
@@ -41,7 +36,6 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
-import { SCVCS } from "@/data/scvcs"
 
 interface VulnerabilityDisplayProps {
   scvc: SCVCS | null
