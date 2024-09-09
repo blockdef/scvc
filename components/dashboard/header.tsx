@@ -9,9 +9,10 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
-import { Input } from "@/components/ui/input"
-import { CommandMenuSearch } from "@/components/command-menu-search"
+
+
 import UserMenu from "@/components/dashboard/user-menu"
+import { DashboardSearch } from "@/components/dashboard/dashboard-search"
 
 export default function Header() {
   return (
@@ -32,7 +33,7 @@ export default function Header() {
         </BreadcrumbList>
       </Breadcrumb>
       <div className="relative ml-auto flex-1 md:grow-0">
-        <CommandMenuSearch />
+        <DashboardSearch />
       </div>
       <UserMenu />
     </header>

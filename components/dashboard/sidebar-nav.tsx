@@ -6,7 +6,7 @@ import {
   LineChartIcon,
   SettingsIcon,
 } from "lucide-react"
-
+import { ThemeToggle } from "@/components/theme-toggle"
 import { TooltipProvider } from "@/components/ui/tooltip"
 import SidebarLink from "@/components/dashboard/sidebar-link"
 
@@ -30,7 +30,9 @@ export default function Sidebar() {
           <SidebarLink href="#" icon={<LineChartIcon />} label="Analytics" />
         </TooltipProvider>
       </nav>
+
       <nav className="mt-auto flex flex-col items-center gap-4 px-2 sm:py-5">
+        <ThemeToggle />
         <TooltipProvider>
           <SidebarLink href="#" icon={<SettingsIcon />} label="Settings" />
         </TooltipProvider>

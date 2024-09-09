@@ -1,6 +1,6 @@
-import Header from "@/components/dashboard/header"
-import SmartContractVulnerabilities from "@/components/dashboard/main-content"
-import Sidebar from "@/components/dashboard/sidebar-nav"
+import Sidebar from '@/components/dashboard/sidebar-nav'
+import Header from '@/components/dashboard/header'
+import SmartContractVulnerabilities from '@/components/dashboard/main-content'
 
 export default function Dashboard() {
   return (
