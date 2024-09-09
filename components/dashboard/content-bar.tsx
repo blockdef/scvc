@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import React, { useState } from "react"
 import Link from "next/link"
@@ -49,7 +49,8 @@ export default function ContentBar() {
                 size="icon"
                 onClick={() =>
                   window.open(
-                    "https://github.com/blockdef/scvc-data/blob/main/README.md" ?? "#",
+                    "https://github.com/blockdef/scvc-data/blob/main/README.md" ??
+                      "#",
                     "_blank"
                   )
                 }

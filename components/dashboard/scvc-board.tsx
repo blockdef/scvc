@@ -216,7 +216,7 @@ export default function ScvcBoard() {
 
   const handleCardClick = (vuln: Vulnerability) => {
     setSelectedVuln(vuln)
-    window.open(`scvc-dashboard/${vuln.slug}`, '_blank')
+    window.open(`scvc-dashboard/${vuln.slug}`, "_blank")
   }
 
   return (

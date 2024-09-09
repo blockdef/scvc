@@ -6,9 +6,10 @@ import {
   LineChartIcon,
   SettingsIcon,
 } from "lucide-react"
-import { ThemeToggle } from "@/components/theme-toggle"
+
 import { TooltipProvider } from "@/components/ui/tooltip"
 import SidebarLink from "@/components/dashboard/sidebar-link"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 import { Separator } from "../ui/separator"
 

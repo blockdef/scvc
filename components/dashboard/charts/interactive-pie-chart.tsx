@@ -83,8 +83,12 @@ export function InteractivePieChart() {
       <ChartStyle id={id} config={chartConfig} />
       <CardHeader className="flex-row items-start space-y-0 pb-0">
         <div className="grid gap-1">
-          <CardTitle className="text-lg font-semibold">Pie Chart - Interactive</CardTitle>
-          <CardDescription className="text-sm text-muted-foreground">January - June 2024</CardDescription>
+          <CardTitle className="text-lg font-semibold">
+            Pie Chart - Interactive
+          </CardTitle>
+          <CardDescription className="text-sm text-muted-foreground">
+            January - June 2024
+          </CardDescription>
         </div>
         <Select value={activeMonth} onValueChange={setActiveMonth}>
           <SelectTrigger

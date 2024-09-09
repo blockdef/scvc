@@ -44,8 +44,12 @@ export function LineChartLabel() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-lg font-semibold">Line Chart - Label</CardTitle>
-        <CardDescription className="text-sm text-muted-foreground">January - June 2024</CardDescription>
+        <CardTitle className="text-lg font-semibold">
+          Line Chart - Label
+        </CardTitle>
+        <CardDescription className="text-sm text-muted-foreground">
+          January - June 2024
+        </CardDescription>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig}>

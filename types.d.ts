@@ -14,7 +14,7 @@ type VulnerabilityPost = {
 }
 
 type Vulnerability = {
-  id: string,
+  id: string
   title: string
   description: string
   severity: string
@@ -26,4 +26,3 @@ type Vulnerability = {
   slug: string
   date: string
 }
-

@@ -40,8 +40,10 @@ export function RadarChartCircle() {
   return (
     <Card>
       <CardHeader className="items-center pb-4">
-        <CardTitle className="text-lg font-semibold">Radar Chart - Grid Circle - No lines</CardTitle>
-        <CardDescription >
+        <CardTitle className="text-lg font-semibold">
+          Radar Chart - Grid Circle - No lines
+        </CardTitle>
+        <CardDescription>
           Showing total visitors for the last 6 months
         </CardDescription>
       </CardHeader>

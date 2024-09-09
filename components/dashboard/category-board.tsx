@@ -14,7 +14,6 @@ import {
 import { Input } from "@/components/ui/input"
 import { ScrollArea } from "@/components/ui/scroll-area"
 
-
 const vulnerabilities = [
   {
     title: "Reentrancy",
@@ -184,61 +183,59 @@ export default function CategoryBoard() {
   }, [searchTerm])
 
   return (
-      <div>
-        <Card className="w-full lg:w-2xl max-w-2xl lg:h-auto max-h-screen overflow-auto">
-          <CardHeader>
-            <CardTitle className="text-lg font-semibold mb-2">
-              SCVCs
-            </CardTitle>
-            <div className="relative">
-              <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
-              <Input
-                type="search"
-                placeholder="Search a vulnerability..."
-                className="pl-8"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-              />
+    <div>
+      <Card className="w-full lg:w-2xl max-w-2xl lg:h-auto max-h-screen overflow-auto">
+        <CardHeader>
+          <CardTitle className="text-lg font-semibold mb-2">SCVCs</CardTitle>
+          <div className="relative">
+            <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
+            <Input
+              type="search"
+              placeholder="Search a vulnerability..."
+              className="pl-8"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+          </div>
+        </CardHeader>
+        <CardContent className="p-0">
+          <ScrollArea className="h-[300px] lg:h-auto w-full rounded-md">
+            <div className="space-y-4 p-4">
+              {filteredVulnerabilities.map((vuln, index) => (
+                <Card
+                  key={index}
+                  className={`cursor-pointer transition-colors ${
+                    selectedVuln.title === vuln.title ? "border-primary" : ""
+                  }`}
+                  onClick={() => setSelectedVuln(vuln)}
+                >
+                  <CardHeader className="p-4">
+                    <div className="flex items-center justify-between">
+                      <CardTitle className="text-lg">{vuln.title}</CardTitle>
+                      <Badge
+                        variant={
+                          vuln.severity === "Critical"
+                            ? "destructive"
+                            : vuln.severity === "High"
+                            ? "default"
+                            : vuln.severity === "Medium"
+                            ? "secondary"
+                            : "outline"
+                        }
+                      >
+                        {vuln.severity}
+                      </Badge>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="p-4 pt-0">
+                    <CardDescription>{vuln.description}</CardDescription>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
-          </CardHeader>
-          <CardContent className="p-0">
-            <ScrollArea className="h-[300px] lg:h-auto w-full rounded-md">
-              <div className="space-y-4 p-4">
-                {filteredVulnerabilities.map((vuln, index) => (
-                  <Card
-                    key={index}
-                    className={`cursor-pointer transition-colors ${
-                      selectedVuln.title === vuln.title ? "border-primary" : ""
-                    }`}
-                    onClick={() => setSelectedVuln(vuln)}
-                  >
-                    <CardHeader className="p-4">
-                      <div className="flex items-center justify-between">
-                        <CardTitle className="text-lg">{vuln.title}</CardTitle>
-                        <Badge
-                          variant={
-                            vuln.severity === "Critical"
-                              ? "destructive"
-                              : vuln.severity === "High"
-                              ? "default"
-                              : vuln.severity === "Medium"
-                              ? "secondary"
-                              : "outline"
-                          }
-                        >
-                          {vuln.severity}
-                        </Badge>
-                      </div>
-                    </CardHeader>
-                    <CardContent className="p-4 pt-0">
-                      <CardDescription>{vuln.description}</CardDescription>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </ScrollArea>
-          </CardContent>
-        </Card>
-      </div>
+          </ScrollArea>
+        </CardContent>
+      </Card>
+    </div>
   )
 }
