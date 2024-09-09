@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import { vulnerabilities } from "@/data/scvcs"
 import { Search } from "lucide-react"
 
 import { Badge } from "@/components/ui/badge"
@@ -13,7 +14,6 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { ScrollArea } from "@/components/ui/scroll-area"
-import { vulnerabilities } from "@/data/scvcs"
 import { Separator } from "@/components/ui/separator"
 
 export default function CategoryBoard() {
@@ -45,10 +45,13 @@ export default function CategoryBoard() {
     <div>
       <Card className="w-full lg:w-2xl max-w-2xl lg:h-auto max-h-screen overflow-auto">
         <CardHeader>
-          <CardTitle className="text-lg font-semibold mb-2">SCVCs ({vulnerabilities.length})</CardTitle>
+          <CardTitle className="text-lg font-semibold mb-2">
+            SCVCs ({vulnerabilities.length})
+          </CardTitle>
           <CardDescription className="text-sm text-muted-foreground mb-2">
-            Explore the Smart Contract Vulnerability Classification (SCVC) system to identify,
-            analyze, and mitigate potential security risks in blockchain-based applications.
+            Explore the Smart Contract Vulnerability Classification (SCVC)
+            system to identify, analyze, and mitigate potential security risks
+            in blockchain-based applications.
           </CardDescription>
           <div className="relative">
             <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />

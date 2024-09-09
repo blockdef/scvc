@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react"
 
 interface BadgeEffectProps {
-  text: string;
+  text: string
 }
 
 export default function BadgeEffect({ text }: BadgeEffectProps) {
@@ -15,5 +15,5 @@ export default function BadgeEffect({ text }: BadgeEffectProps) {
         {text}
       </span>
     </div>
-  );
+  )
 }

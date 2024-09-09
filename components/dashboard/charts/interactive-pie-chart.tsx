@@ -87,7 +87,8 @@ export function InteractivePieChart() {
             Vulnerability Distribution by Blockchain
           </CardTitle>
           <CardDescription className="text-sm text-muted-foreground">
-            A bar chart shows the number of vulnerabilities reported for each blockchain.
+            A bar chart shows the number of vulnerabilities reported for each
+            blockchain.
           </CardDescription>
         </div>
         <Select value={activeMonth} onValueChange={setActiveMonth}>

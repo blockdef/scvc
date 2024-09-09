@@ -1,6 +1,8 @@
 "use client"
 
 import * as React from "react"
+import { ArrowRightCircleIcon } from "lucide-react"
+
 import {
   Card,
   CardContent,
@@ -8,11 +10,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import BadgeEffect from "@/components/dashboard/badge-effect"
+
 import { InteractivePieChart } from "./charts/interactive-pie-chart"
 import { LineChartLabel } from "./charts/line-chart-label"
 import { RadarChartCircle } from "./charts/radar-chart-circle"
-import BadgeEffect from "@/components/dashboard/badge-effect"
-import { ArrowRightCircleIcon } from "lucide-react"
 
 export default function ChartViewCard() {
   return (
@@ -29,7 +31,16 @@ export default function ChartViewCard() {
             Visualize trends and patterns in smart contract vulnerabilities to
             enhance your understanding and improve security measures
           </CardDescription>
-          <p className="text-sm italic text-muted-foreground"><ArrowRightCircleIcon className="inline size-4 ml-1 mr-1" />See more: <a href={process.env.NEXT_PUBLIC_BLOCKDEF_SITE ?? '/'} className="text-blue-500 hover:underline">blockdef.dev</a></p>
+          <p className="text-sm italic text-muted-foreground">
+            <ArrowRightCircleIcon className="inline size-4 ml-1 mr-1" />
+            See more:{" "}
+            <a
+              href={process.env.NEXT_PUBLIC_BLOCKDEF_SITE ?? "/"}
+              className="text-blue-500 hover:underline"
+            >
+              blockdef.dev
+            </a>
+          </p>
         </CardHeader>
         <CardContent className="p-0">
           <InteractivePieChart />

@@ -67,7 +67,7 @@ export function SiteHeader() {
           <Icons.linkedin className="size-4" />
         </Button>
         <div>
-          <ThemeToggle />
+          <ThemeToggle additionalStyle={true} />
           <CommandMenuSearch />
         </div>
       </div>

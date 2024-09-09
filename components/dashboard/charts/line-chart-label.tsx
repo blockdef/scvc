@@ -48,7 +48,9 @@ export function LineChartLabel() {
           Vulnerability Frequency Over Time
         </CardTitle>
         <CardDescription className="text-sm text-muted-foreground">
-          A line or bar chart illustrates the number of vulnerabilities reported over time. It helps identify trends or patterns, such as periods with more frequent reports.
+          A line or bar chart illustrates the number of vulnerabilities reported
+          over time. It helps identify trends or patterns, such as periods with
+          more frequent reports.
         </CardDescription>
       </CardHeader>
       <CardContent>

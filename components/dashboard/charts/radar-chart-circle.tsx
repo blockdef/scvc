@@ -44,7 +44,8 @@ export function RadarChartCircle() {
           Vulnerability Severity Distribution
         </CardTitle>
         <CardDescription>
-          A pie chart shows the percentage of vulnerabilities across five severity levels: Critical, High, Medium, Low, and Informational.
+          A pie chart shows the percentage of vulnerabilities across five
+          severity levels: Critical, High, Medium, Low, and Informational.
         </CardDescription>
       </CardHeader>
       <CardContent className="pb-0">

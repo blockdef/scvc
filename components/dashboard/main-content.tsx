@@ -3,8 +3,8 @@
 import * as React from "react"
 
 import CategoryBoard from "@/components/dashboard/category-board"
-import UtilityBar from "@/components/dashboard/utility-bar"
 import ChartViewCard from "@/components/dashboard/chart-views-card"
+import UtilityBar from "@/components/dashboard/utility-bar"
 
 export default function SmartContractVulnerabilities() {
   return (
