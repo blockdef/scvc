@@ -38,13 +38,13 @@ const chartConfig = {
 
 export function RadarChartCircle() {
   return (
-    <Card>
+    <Card className="rounded-none">
       <CardHeader className="items-center pb-4">
         <CardTitle className="text-lg font-semibold">
-          Radar Chart - Grid Circle - No lines
+          Vulnerability Severity Distribution
         </CardTitle>
         <CardDescription>
-          Showing total visitors for the last 6 months
+          A pie chart shows the percentage of vulnerabilities across five severity levels: Critical, High, Medium, Low, and Informational.
         </CardDescription>
       </CardHeader>
       <CardContent className="pb-0">

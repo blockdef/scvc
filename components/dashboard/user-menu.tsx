@@ -21,10 +21,16 @@ export default function UserMenu() {
       <DropdownMenuContent align="end">
         <DropdownMenuLabel>Contribute</DropdownMenuLabel>
         <DropdownMenuSeparator />
-        <DropdownMenuItem>Settings</DropdownMenuItem>
-        <DropdownMenuItem>Support</DropdownMenuItem>
+        <DropdownMenuItem>
+          <a href="/#" className="w-full">Settings</a>
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <a href="/#" className="w-full">Support</a>
+        </DropdownMenuItem>
         <DropdownMenuSeparator />
-        <DropdownMenuItem>Go To BLOCKDEF</DropdownMenuItem>
+        <DropdownMenuItem>
+          <a href={process.env.NEXT_PUBLIC_BLOCKDEF_SITE || '#'} className="w-full">Go to BLOCKDEF</a>
+        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   )

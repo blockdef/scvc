@@ -84,10 +84,10 @@ export function InteractivePieChart() {
       <CardHeader className="flex-row items-start space-y-0 pb-0">
         <div className="grid gap-1">
           <CardTitle className="text-lg font-semibold">
-            Pie Chart - Interactive
+            Vulnerability Distribution by Blockchain
           </CardTitle>
           <CardDescription className="text-sm text-muted-foreground">
-            January - June 2024
+            A bar chart shows the number of vulnerabilities reported for each blockchain.
           </CardDescription>
         </div>
         <Select value={activeMonth} onValueChange={setActiveMonth}>
