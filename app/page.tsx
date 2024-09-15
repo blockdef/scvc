@@ -25,7 +25,11 @@ export default function LandingPage() {
             </p>
           </div>
           <div className="absolute top-[40.5rem] right-[4.7rem] transform -translate-y-1/2 max-w-72">
-            <Link href={`${process.env.NEXT_PUBLIC_DOCUMENTATION}/contributions`} target="_blank" referrerPolicy="no-referrer">
+            <Link
+              href={`${process.env.NEXT_PUBLIC_DOCUMENTATION}/contributions`}
+              target="_blank"
+              referrerPolicy="no-referrer"
+            >
               <Button
                 variant="outline"
                 className="w-full bg-white/90 border-transparent hover:bg-gray-200 text-black hover:text-black md:w-auto mr-[0.5rem] shadow-xl shadow-black"
@@ -47,7 +51,9 @@ export default function LandingPage() {
 
       {/* Section for xs devices or mobile devices */}
       <section className="flex sm:hidden flex-col items-center justify-center h-screen bg-body-grid rounded-xl bg-primary/80">
-        <h2 className="text-white text-md mb-4 font-bold">For the full experience, view on desktop</h2>
+        <h2 className="text-white text-md mb-4 font-bold">
+          For the full experience, view on desktop
+        </h2>
         <Link href="/scvc-dashboard">
           <Button
             variant="outline"

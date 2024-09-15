@@ -1,14 +1,22 @@
-"use client";
+"use client"
 
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod"
+import { FileIcon, Languages, LucideSortDesc } from "lucide-react"
+import { useTheme } from "next-themes"
+import { useForm } from "react-hook-form"
+import { z } from "zod"
 
-import { useTheme } from "next-themes";
-import { LucideSortDesc, FileIcon, Languages } from "lucide-react";
-
-import { cn } from "@/lib/utils";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils"
+import { toast } from "@/hooks/use-toast"
+import { Button, buttonVariants } from "@/components/ui/button"
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+} from "@/components/ui/command"
 import {
   Form,
   FormControl,
@@ -17,18 +25,13 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
+} from "@/components/ui/form"
 import {
-  Command,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList,
-} from "@/components/ui/command";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { toast } from "@/hooks/use-toast";
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover"
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 
 const languages = [
   { label: "English", value: "en" },
@@ -40,7 +43,7 @@ const languages = [
   { label: "Japanese", value: "ja" },
   { label: "Korean", value: "ko" },
   { label: "Chinese", value: "zh" },
-] as const;
+] as const
 
 const appearanceFormSchema = z.object({
   theme: z.enum(["light", "dark"], {
@@ -53,22 +56,22 @@ const appearanceFormSchema = z.object({
   language: z.string({
     required_error: "Please select a language.",
   }),
-});
+})
 
-type AppearanceFormValues = z.infer<typeof appearanceFormSchema>;
+type AppearanceFormValues = z.infer<typeof appearanceFormSchema>
 
 // This can come from your database or API.
 const defaultValues: Partial<AppearanceFormValues> = {
   theme: "dark",
-};
+}
 
 export function AppearanceForm() {
-  const { setTheme, theme } = useTheme();
+  const { setTheme, theme } = useTheme()
 
   const form = useForm<AppearanceFormValues>({
     resolver: zodResolver(appearanceFormSchema),
     defaultValues,
-  });
+  })
 
   function onSubmit(data: AppearanceFormValues) {
     toast({
@@ -78,7 +81,7 @@ export function AppearanceForm() {
           <code className="text-white">{JSON.stringify(data, null, 2)}</code>
         </pre>
       ),
-    });
+    })
   }
 
   return (
@@ -96,7 +99,7 @@ export function AppearanceForm() {
                   <select
                     className={cn(
                       buttonVariants({ variant: "outline" }),
-                      "w-[200px] appearance-none font-normal",
+                      "w-[200px] appearance-none font-normal"
                     )}
                     {...field}
                   >
@@ -130,12 +133,12 @@ export function AppearanceForm() {
                       role="combobox"
                       className={cn(
                         "w-[200px] justify-between",
-                        !field.value && "text-muted-foreground",
+                        !field.value && "text-muted-foreground"
                       )}
                     >
                       {field.value
                         ? languages.find(
-                            (language) => language.value === field.value,
+                            (language) => language.value === field.value
                           )?.label
                         : "Select language"}
                       <Languages className="ml-2 size-4 shrink-0 opacity-50" />
@@ -153,7 +156,7 @@ export function AppearanceForm() {
                             value={language.label}
                             key={language.value}
                             onSelect={() => {
-                              form.setValue("language", language.value);
+                              form.setValue("language", language.value)
                             }}
                           >
                             <Languages
@@ -161,7 +164,7 @@ export function AppearanceForm() {
                                 "mr-2 size-4",
                                 language.value === field.value
                                   ? "opacity-100"
-                                  : "opacity-0",
+                                  : "opacity-0"
                               )}
                             />
                             {language.label}
@@ -252,5 +255,5 @@ export function AppearanceForm() {
         />
       </form>
     </Form>
-  );
+  )
 }

@@ -1,8 +1,10 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { headerButtonsData } from "@/content/header/header-buttons"
+
 import { Button } from "@/components/ui/button"
 import { CommandMenuSearch } from "@/components/command-menu-search"
 import { MainButtons } from "@/components/header/main-buttons"
@@ -11,7 +13,6 @@ import { ThemeToggle } from "@/components/theme-toggle"
 
 import darklogo from "../../public/logo-dark.svg"
 import logo from "../../public/logo.svg"
-import Link from "next/link"
 
 export function SiteHeader() {
   const pathname = usePathname()
@@ -29,11 +30,13 @@ export function SiteHeader() {
         </Button>
         <div>
           {headerButtonsData.map((config, index) => (
-            <Link key={index} href={config.link || '#'} target="_blank" referrerPolicy="no-referrer">
-              <Button
-                variant={config.variant}
-                className={config.className}
-              >
+            <Link
+              key={index}
+              href={config.link || "#"}
+              target="_blank"
+              referrerPolicy="no-referrer"
+            >
+              <Button variant={config.variant} className={config.className}>
                 {config.children}
               </Button>
             </Link>
@@ -55,7 +58,11 @@ export function SiteHeader() {
         />
       </div>
       <div className="flex justify-end">
-        <Link href={process.env.NEXT_PUBLIC_SCVC_GITHUB_REPO ?? '/'} target="_blank" rel="noopener noreferrer">
+        <Link
+          href={process.env.NEXT_PUBLIC_SCVC_GITHUB_REPO ?? "/"}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Button
             variant="outline"
             className="w-full font-bold bg-accent border-transparent hover:bg-[#3333] md:w-auto mx-[0.1rem] dark:hover:bg-white hover:text-black"
@@ -63,7 +70,11 @@ export function SiteHeader() {
             <Icons.gitHub className="size-4" />
           </Button>
         </Link>
-        <Link href={process.env.NEXT_PUBLIC_BLOCKDEF_LINKEDIN ?? '/'} target="_blank" rel="noopener noreferrer">
+        <Link
+          href={process.env.NEXT_PUBLIC_BLOCKDEF_LINKEDIN ?? "/"}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Button
             variant="outline"
             className="w-full font-bold bg-accent border-transparent hover:bg-[#3333] md:w-auto mx-[0.1rem] dark:hover:bg-white hover:text-black"

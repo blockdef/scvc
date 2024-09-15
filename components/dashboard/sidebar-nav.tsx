@@ -1,16 +1,15 @@
 import {
+  BookOpen,
   BugIcon,
   HomeIcon,
-  BookOpen,
   LayoutGridIcon,
   SettingsIcon,
 } from "lucide-react"
 
+import { Separator } from "@/components/ui/separator"
 import { TooltipProvider } from "@/components/ui/tooltip"
 import SidebarLink from "@/components/dashboard/sidebar-link"
 import { ThemeToggle } from "@/components/theme-toggle"
-
-import { Separator } from "@/components/ui/separator"
 
 export default function Sidebar() {
   return (
@@ -24,16 +23,33 @@ export default function Sidebar() {
             primary
           />
           <Separator className="" />
-          <SidebarLink href="/scvc-dashboard" icon={<HomeIcon />} label="Dashboard" active />
-          <SidebarLink href={`${process.env.NEXT_PUBLIC_BLOCKDEF_SITE}/scalability` ?? '/'} icon={<LayoutGridIcon />} label="Resources" />
-          <SidebarLink href={process.env.NEXT_PUBLIC_DOCUMENTATION ?? '/'} icon={<BookOpen />} label="Documentation" />
+          <SidebarLink
+            href="/scvc-dashboard"
+            icon={<HomeIcon />}
+            label="Dashboard"
+            active
+          />
+          <SidebarLink
+            href={`${process.env.NEXT_PUBLIC_BLOCKDEF_SITE}/scalability` ?? "/"}
+            icon={<LayoutGridIcon />}
+            label="Resources"
+          />
+          <SidebarLink
+            href={process.env.NEXT_PUBLIC_DOCUMENTATION ?? "/"}
+            icon={<BookOpen />}
+            label="Documentation"
+          />
         </TooltipProvider>
       </nav>
 
       <nav className="mt-auto flex flex-col items-center gap-4 px-2 sm:py-5">
         <ThemeToggle />
         <TooltipProvider>
-          <SidebarLink href="/settings" icon={<SettingsIcon />} label="Settings" />
+          <SidebarLink
+            href="/settings"
+            icon={<SettingsIcon />}
+            label="Settings"
+          />
         </TooltipProvider>
       </nav>
     </aside>

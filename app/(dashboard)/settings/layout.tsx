@@ -1,12 +1,13 @@
-"use client";
+"use client"
 
-import { Separator } from "@/components/ui/separator";
-import Sidebar from "@/components/dashboard/sidebar-nav";
-import Link from "next/link";
-import { ArrowLeftIcon } from "lucide-react";
+import Link from "next/link"
+import { ArrowLeftIcon } from "lucide-react"
+
+import { Separator } from "@/components/ui/separator"
+import Sidebar from "@/components/dashboard/sidebar-nav"
 
 interface SettingsLayoutProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
 export default function SettingsLayout({ children }: SettingsLayoutProps) {
@@ -39,5 +40,5 @@ export default function SettingsLayout({ children }: SettingsLayoutProps) {
         </div>
       </div>
     </>
-  );
+  )
 }

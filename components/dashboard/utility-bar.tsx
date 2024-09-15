@@ -71,7 +71,8 @@ export default function UtilityBar() {
                 size="icon"
                 onClick={() =>
                   window.open(
-                    `${process.env.NEXT_PUBLIC_DOCUMENTATION}/contributions` ?? "#",
+                    `${process.env.NEXT_PUBLIC_DOCUMENTATION}/contributions` ??
+                      "#",
                     "_blank"
                   )
                 }

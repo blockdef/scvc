@@ -1,6 +1,7 @@
+import Link from "next/link"
+
 import { Button } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
-import Link from "next/link"
 
 interface NavSheetTriggerProps {
   name: string
