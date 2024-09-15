@@ -10,4 +10,5 @@ export type ButtonConfig = {
     | undefined
   className: string
   children: string
+  link: string
 }

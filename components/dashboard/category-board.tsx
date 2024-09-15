@@ -14,7 +14,6 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { ScrollArea } from "@/components/ui/scroll-area"
-import { Separator } from "@/components/ui/separator"
 
 export default function CategoryBoard() {
   const [selectedVuln, setSelectedVuln] = React.useState(vulnerabilities[0])
@@ -77,7 +76,7 @@ export default function CategoryBoard() {
                 >
                   <CardHeader className="p-4">
                     <div className="flex items-center justify-between">
-                      <CardTitle className="text-lg">{vuln.title}</CardTitle>
+                      <CardTitle className="text-md">{vuln.id.toUpperCase()} - {vuln.title}</CardTitle>
                       <Badge
                         className={
                           vuln.severity === "Critical"

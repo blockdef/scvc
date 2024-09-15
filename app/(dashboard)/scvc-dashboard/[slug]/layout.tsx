@@ -1,6 +1,7 @@
 import React from "react"
-import Sidebar from "@/components/dashboard/sidebar-nav"
+
 import Header from "@/components/dashboard/header"
+import Sidebar from "@/components/dashboard/sidebar-nav"
 
 export default function DashboardLayout({
   children,

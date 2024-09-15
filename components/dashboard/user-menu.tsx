@@ -22,13 +22,8 @@ export default function UserMenu() {
         <DropdownMenuLabel>Contribute</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuItem>
-          <a href="/#" className="w-full">
+          <a href="/settings" className="w-full">
             Settings
-          </a>
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          <a href="/#" className="w-full">
-            Support
           </a>
         </DropdownMenuItem>
         <DropdownMenuSeparator />
